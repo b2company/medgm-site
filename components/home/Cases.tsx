@@ -69,7 +69,7 @@ export default function Cases() {
               </div>
 
               <blockquote className="border-l-4 border-gold pl-4 mb-4">
-                <p className="text-gray-700 italic mb-2">"{item.testimonial}"</p>
+                <p className="text-gray-700 italic mb-2">&ldquo;{item.testimonial}&rdquo;</p>
               </blockquote>
 
               <p className="font-semibold text-dark">{item.author}</p>
