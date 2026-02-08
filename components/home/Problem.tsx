@@ -82,7 +82,7 @@ export default function Problem() {
             <strong className="text-dark">Reconheceu sua clínica em algum desses cenários?</strong>
           </p>
           <p className="text-lg text-gray-700 leading-relaxed">
-            O problema não é você. É que 90% das agências vendem <em>"solução de marketing"</em> quando
+            O problema não é você. É que 90% das agências vendem <em>&ldquo;solução de marketing&rdquo;</em> quando
             o que você precisa é de <strong className="text-gold">estrutura comercial completa</strong>.
             Elas entregam visualizações. Nós entregamos pacientes. Elas vendem posts. Nós implementamos
             o sistema que transforma lead em consulta, consulta em fidelização, e fidelização em receita

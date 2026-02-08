@@ -71,14 +71,15 @@ export default function Servicos() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-dark text-white pt-32 pb-20">
-        <div className="container-custom">
+      <section className="relative bg-gradient-to-br from-dark-deep via-dark to-dark-deeper text-white pt-32 pb-20 shadow-dark-inset">
+        <div className="absolute inset-0 bg-black/30 z-0"></div>
+        <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif mb-8 leading-tight">
               Soluções completas para cada fase da{" "}
-              <span className="text-gold">sua clínica</span>
+              <span className="text-gold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">sua clínica</span>
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl md:text-2xl text-gray-300 font-light">
               Do início da jornada digital até a dominância de mercado. Escolha o
               plano ideal para o seu momento.
             </p>
@@ -108,10 +109,10 @@ export default function Servicos() {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h2 className="text-3xl font-bold text-gold mb-2">
+                    <h2 className="text-3xl font-heading font-bold text-gold mb-2">
                       {plan.name}
                     </h2>
-                    <p className="text-xl font-semibold mb-4">{plan.subtitle}</p>
+                    <p className="text-xl font-heading font-semibold mb-4">{plan.subtitle}</p>
                     <p className="text-gray-700 mb-6 leading-relaxed">
                       {plan.description}
                     </p>
@@ -205,10 +206,13 @@ export default function Servicos() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-dark text-white">
+      <section className="section-padding bg-gradient-to-br from-dark-deep via-dark to-dark-deeper text-white">
         <div className="container-custom max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gold mb-6">
-            Não tem certeza qual plano escolher?
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6">
+            Não tem certeza qual{" "}
+            <span className="text-gold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
+              plano escolher?
+            </span>
           </h2>
           <p className="text-lg text-gray-300 mb-8">
             Agende um diagnóstico gratuito e vamos analisar juntos qual a melhor

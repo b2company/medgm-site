@@ -40,14 +40,15 @@ export default function Sobre() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-dark text-white pt-32 pb-20">
-        <div className="container-custom">
+      <section className="relative bg-gradient-to-br from-dark-deep via-dark to-dark-deeper text-white pt-32 pb-20 shadow-dark-inset">
+        <div className="absolute inset-0 bg-black/30 z-0"></div>
+        <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif mb-8 leading-tight">
               Nascemos para trazer de volta a{" "}
-              <span className="text-gold">era de ouro da medicina</span>
+              <span className="text-gold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">era de ouro da medicina</span>
             </h1>
-            <p className="text-xl text-gray-300 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed font-light">
               A MedGM é mais do que uma consultoria de marketing médico. Somos a
               ponte entre a excelência clínica que você já tem e o reconhecimento
               de mercado que você merece.
@@ -90,8 +91,8 @@ export default function Sobre() {
             {values.map((value, index) => (
               <div key={index} className="card">
                 <value.icon className="text-gold mb-4" size={40} />
-                <h3 className="text-xl font-bold mb-3">{value.title}</h3>
-                <p className="text-gray-700">{value.description}</p>
+                <h3 className="text-xl font-heading font-bold mb-3">{value.title}</h3>
+                <p className="text-gray-700 leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -99,10 +100,13 @@ export default function Sobre() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-dark text-white">
+      <section className="section-padding bg-gradient-to-br from-dark-deep via-dark to-dark-deeper text-white">
         <div className="container-custom max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gold mb-6">
-            Vamos construir a era de ouro da sua clínica?
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6">
+            Vamos construir a{" "}
+            <span className="text-gold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
+              era de ouro da sua clínica?
+            </span>
           </h2>
           <p className="text-lg text-gray-300 mb-8">
             Agende seu diagnóstico gratuito e descubra como podemos ajudar.

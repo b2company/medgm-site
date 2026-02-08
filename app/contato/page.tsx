@@ -54,14 +54,15 @@ export default function Contato() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-dark text-white pt-32 pb-20">
-        <div className="container-custom">
+      <section className="relative bg-gradient-to-br from-dark-deep via-dark to-dark-deeper text-white pt-32 pb-20 shadow-dark-inset">
+        <div className="absolute inset-0 bg-black/30 z-0"></div>
+        <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif mb-8 leading-tight">
               Vamos conversar sobre o{" "}
-              <span className="text-gold">futuro da sua clínica?</span>
+              <span className="text-gold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">futuro da sua clínica?</span>
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl md:text-2xl text-gray-300 font-light">
               Entre em contato e descubra como podemos ajudar a construir a era de
               ouro da medicina na sua prática.
             </p>
@@ -75,7 +76,7 @@ export default function Contato() {
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Informações de Contato */}
             <div>
-              <h2 className="text-3xl font-bold mb-8">Fale Conosco</h2>
+              <h2 className="text-3xl font-heading font-bold mb-8">Fale Conosco</h2>
 
               <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4">
@@ -152,7 +153,7 @@ export default function Contato() {
 
             {/* Formulário */}
             <div>
-              <h2 className="text-3xl font-bold mb-8">Envie uma Mensagem</h2>
+              <h2 className="text-3xl font-heading font-bold mb-8">Envie uma Mensagem</h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
