@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   const scrollToContent = () => {
@@ -16,6 +17,22 @@ export default function Hero() {
     <section className="relative bg-dark text-white min-h-screen flex items-center pt-20">
       <div className="container-custom py-20">
         <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-8 flex justify-center"
+          >
+            <Image
+              src="/Vector.png"
+              alt="MedGM"
+              width={200}
+              height={100}
+              priority
+              className="w-auto h-auto max-w-[200px]"
+            />
+          </motion.div>
+
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
