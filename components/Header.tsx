@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -34,8 +35,15 @@ export default function Header() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-gold font-serif">
-            MedGM
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/Vector.png"
+              alt="MedGM"
+              width={120}
+              height={60}
+              priority
+              className="w-auto h-12"
+            />
           </Link>
 
           {/* Desktop Navigation */}
