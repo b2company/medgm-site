@@ -23,7 +23,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display mb-8 leading-tight tracking-wider"
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif mb-8 leading-tight"
           >
             Sua clínica merece mais do que likes.{" "}
             <span className="text-gold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">

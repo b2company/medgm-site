@@ -28,8 +28,8 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-dark/90 backdrop-blur-md shadow-lg" : "bg-dark"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? "bg-dark/80 backdrop-blur-[10px] shadow-2xl" : "bg-dark/95"
       }`}
     >
       <div className="container-custom">
@@ -39,10 +39,10 @@ export default function Header() {
             <Image
               src="/Vector.png"
               alt="MedGM"
-              width={80}
-              height={40}
+              width={60}
+              height={30}
               priority
-              className="w-auto h-8 md:h-10"
+              className="w-auto h-6 md:h-7"
             />
           </Link>
 

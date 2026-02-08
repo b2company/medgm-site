@@ -62,11 +62,22 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-2 ${
-                plan.popular
-                  ? "border-gold scale-105 shadow-2xl"
-                  : "border-white/10"
+              whileHover={{ y: -10, scale: 1.02 }}
+              className={`relative bg-dark-deep backdrop-blur-sm rounded-[40px] p-8 transition-all duration-500 ${
+                plan.popular ? "scale-105" : ""
               }`}
+              style={
+                plan.popular
+                  ? {
+                      border: "1px solid rgb(202, 170, 130)",
+                      boxShadow:
+                        "rgba(202, 170, 130, 0.5) 0px 0px 20px 0px inset, rgba(202, 170, 130, 0.3) 0px 0px 40px 0px",
+                    }
+                  : {
+                      border: "1px solid rgba(255, 255, 255, 0.1)",
+                      boxShadow: "rgba(0, 0, 0, 0.5) 0px 10px 40px",
+                    }
+              }
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">

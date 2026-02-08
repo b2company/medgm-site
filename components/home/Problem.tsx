@@ -54,10 +54,19 @@ export default function Problem() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="card"
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              whileHover={{ y: -8, transition: { duration: 0.4 } }}
+              className="card group"
             >
-              <point.icon className="text-gold mb-4" size={40} />
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <point.icon
+                  className="text-gold mb-4 transition-colors duration-500 group-hover:text-gold-light"
+                  size={40}
+                />
+              </motion.div>
               <p className="text-gray-700 leading-relaxed">{point.text}</p>
             </motion.div>
           ))}
