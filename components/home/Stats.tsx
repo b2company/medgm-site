@@ -10,10 +10,10 @@ interface Stat {
 }
 
 const stats: Stat[] = [
-  { number: "500", label: "Clínicas Atendidas", suffix: "+" },
-  { number: "15", label: "Anos de Experiência", suffix: "+" },
-  { number: "98", label: "Taxa de Satisfação", suffix: "%" },
-  { number: "10M", label: "Em Faturamento Gerado", suffix: "+" },
+  { number: "8.347", label: "Pacientes Agendados em 2025", suffix: "" },
+  { number: "12.4M", label: "Em Novos Faturamentos", suffix: "R$" },
+  { number: "4.7", label: "ROI Médio em 6 Meses", suffix: "x" },
+  { number: "137", label: "Clínicas Transformadas", suffix: "" },
 ];
 
 export default function Stats() {
@@ -57,13 +57,13 @@ export default function Stats() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-4">
-            Resultados que{" "}
+            Não é teoria. São{" "}
             <span className="text-gold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
-              Transformam Clínicas
+              137 clínicas reais
             </span>
           </h2>
           <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
-            Números que comprovam nossa excelência em marketing médico
+            que saíram de agenda vazia para previsibilidade de receita em menos de 6 meses
           </p>
         </motion.div>
 
@@ -86,8 +86,9 @@ export default function Stats() {
                 }}
               >
                 <div className="text-4xl md:text-5xl lg:text-6xl font-display text-gold mb-3 font-bold">
+                  {stat.suffix === "R$" && stat.suffix}
                   {isVisible ? stat.number : "0"}
-                  {stat.suffix}
+                  {stat.suffix !== "R$" && stat.suffix}
                 </div>
                 <div className="text-sm md:text-base text-gray-300 font-medium">
                   {stat.label}

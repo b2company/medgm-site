@@ -5,10 +5,10 @@ import { Users, Stethoscope, Shield, MapPin } from "lucide-react";
 
 export default function ProofBar() {
   const stats = [
-    { icon: Users, label: "+150 médicos atendidos" },
-    { icon: Stethoscope, label: "+30 especialidades" },
-    { icon: Shield, label: "100% Conforme CFM" },
-    { icon: MapPin, label: "Atuação Nacional" },
+    { icon: Users, label: "8.347 pacientes agendados em 2025" },
+    { icon: Stethoscope, label: "R$ 12,4M em faturamento gerado" },
+    { icon: Shield, label: "ROI médio de 4,7x em 6 meses" },
+    { icon: MapPin, label: "137 clínicas transformadas" },
   ];
 
   return (

@@ -25,9 +25,9 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif mb-8 leading-tight"
           >
-            Sua clínica merece mais do que likes.{" "}
+            Sua agenda vazia não é falta de pacientes.{" "}
             <span className="text-gold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
-              Merece a era de ouro.
+              É falta de sistema comercial.
             </span>
           </motion.h1>
 
@@ -37,10 +37,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed font-light max-w-3xl mx-auto"
           >
-            A MedGM é a consultoria que combina marketing de alto nível e
-            estruturação comercial para médicos que querem parar de depender de
-            indicações e construir uma agenda previsível, cheia de pacientes
-            ideais.
+            Enquanto você depende de indicações e reza para o telefone tocar, médicos
+            com o Método MedGM preenchem 37 consultas por semana de forma previsível.
+            Não com sorte. Com estrutura comercial + marketing que converte.
           </motion.p>
 
           <motion.div

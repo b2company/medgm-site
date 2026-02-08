@@ -15,27 +15,27 @@ export default function Problem() {
   const painPoints = [
     {
       icon: PhoneOff,
-      text: "Sua secretária recebe leads, mas não sabe converter em agendamentos",
+      text: "Lead pede orçamento às 22h. Sua secretária responde às 9h. Ele já fechou com o concorrente que tem chatbot.",
     },
     {
       icon: CircleDollarSign,
-      text: "Você gasta com tráfego pago, mas não sabe de onde vêm seus pacientes",
+      text: "R$ 8 mil/mês em Meta Ads. Você não sabe quantos viraram pacientes. Nem quanto cada um custou. Nem se vale a pena.",
     },
     {
       icon: UserX,
-      text: "Pacientes fazem a primeira consulta e nunca mais voltam",
+      text: "Paciente faz 1 consulta e some. 6 meses depois aparece no Google pedindo indicação de 'outro médico da área'.",
     },
     {
       icon: Shuffle,
-      text: "Você depende de indicações e não tem previsibilidade de receita",
+      text: "Segunda-feira = 12 consultas. Quinta = 3. Você vive na montanha-russa porque depende de quem lembra de te indicar.",
     },
     {
       icon: EyeOff,
-      text: "Sua clínica tem ótimos profissionais, mas ninguém sabe disso",
+      text: "Você é referência na sua especialidade. Mas o Dr. Fulano (que é mediano) tem fila de espera. Por quê? Ele tem sistema.",
     },
     {
       icon: ThumbsDown,
-      text: "Você tentou agências de marketing, mas os resultados não apareceram",
+      text: "Já contratou 3 agências. Todas prometeram 'resultado rápido'. Entregaram posts bonitos. Sua agenda continuou vazia.",
     },
   ];
 
@@ -43,8 +43,8 @@ export default function Problem() {
     <section className="section-padding bg-neutral">
       <div className="container-custom">
         <SectionTitle
-          title="Você investe em marketing, mas sua agenda continua com buracos?"
-          subtitle="O problema não é falta de marketing. É falta de estrutura comercial."
+          title="Por que médicos gastam R$ 15 mil/mês em tráfego e ainda têm agenda vazia?"
+          subtitle="Porque 90% das agências entregam likes, seguidores e 'engajamento'. Mas nenhuma delas estrutura o comercial que transforma lead em paciente fiel. É por isso que você vê resultado no Instagram, mas não no caixa."
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
@@ -78,15 +78,16 @@ export default function Problem() {
           viewport={{ once: true }}
           className="mt-12 text-center max-w-3xl mx-auto"
         >
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            <strong className="text-dark">Reconheceu sua clínica em algum desses cenários?</strong>
+          </p>
           <p className="text-lg text-gray-700 leading-relaxed">
-            O mercado está cheio de agências que priorizam métricas de vaidade:
-            likes, seguidores, engajamento. Mas nada disso paga boletos. O que
-            sua clínica precisa é de um{" "}
-            <strong className="text-gold">
-              processo comercial que transforma atenção online em consultas
-              marcadas e pacientes fiéis
-            </strong>
-            . É exatamente isso que fazemos.
+            O problema não é você. É que 90% das agências vendem <em>"solução de marketing"</em> quando
+            o que você precisa é de <strong className="text-gold">estrutura comercial completa</strong>.
+            Elas entregam visualizações. Nós entregamos pacientes. Elas vendem posts. Nós implementamos
+            o sistema que transforma lead em consulta, consulta em fidelização, e fidelização em receita
+            previsível. <strong className="text-gold">É exatamente isso que separa clínicas que sobrevivem
+            das que prosperam.</strong>
           </p>
         </motion.div>
       </div>

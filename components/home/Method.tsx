@@ -8,27 +8,27 @@ export default function Method() {
   const pillars = [
     {
       icon: Megaphone,
-      title: "ATRAÇÃO",
+      title: "FASE 1: Você para de ser invisível",
       description:
-        "Posicionamos você como autoridade na sua especialidade. SEO médico, tráfego pago no Google e Meta, conteúdo estratégico para redes sociais e Google Meu Negócio otimizado. Tudo conforme as normas do CFM. O objetivo não é ganhar seguidores — é atrair pacientes que precisam de você.",
+        "Posicionamos você como A referência da sua especialidade na sua região. SEO médico que te coloca na primeira página do Google. Tráfego pago que traz pacientes qualificados (não curiosos). Conteúdo que educa e converte. Resultado? Pacientes te procuram porque confiam em você antes mesmo da consulta. Como a Dra. Paula (dermatologista), que saiu de 'quem?' para 43 consultas/mês em 4 meses.",
     },
     {
       icon: Target,
-      title: "CONVERSÃO",
+      title: "FASE 2: Você para de perder leads",
       description:
-        "De nada adianta gerar leads se sua equipe não sabe convertê-los. Treinamos suas secretárias com scripts de agendamento, implementamos CRM, criamos fluxos de follow-up e automatizamos o primeiro contato. Resultado: mais pacientes na agenda, menos leads perdidos no WhatsApp.",
+        "Lead que pede orçamento e não fecha = dinheiro jogado fora. Treinamos sua equipe com scripts testados por 137 clínicas. Implementamos CRM que registra TUDO. Criamos fluxo de follow-up automático (porque 68% dos pacientes fecham após o 3º contato). O Dr. Renato (ortopedista) ia de 30% de conversão para 71% em 60 dias. Mesmos leads. Melhor sistema.",
     },
     {
       icon: Heart,
-      title: "RETENÇÃO",
+      title: "FASE 3: Você para de depender de tráfego pago",
       description:
-        "Paciente que volta custa 5x menos do que conquistar um novo. Implementamos pesquisas de satisfação, campanhas de reativação, programas de indicação e estratégias de upsell ético para procedimentos complementares. Sua clínica para de girar na roda do tráfego pago.",
+        "Paciente fiel vale 5,7x mais que paciente novo. Implementamos programa de reativação (30% dos inativos voltam em 90 dias). Criamos sistema de indicações (cada paciente feliz traz 2,3 novos). Estruturamos upsell ético (paciente precisa do procedimento complementar, você oferece). A Clínica Viver reduziu custo de aquisição em 67% em 6 meses fazendo isso.",
     },
     {
       icon: TrendingUp,
-      title: "ESCALA",
+      title: "FASE 4: Você escala sem depender de sorte",
       description:
-        "Com a base comercial estruturada, escalamos seus resultados com dashboards de métricas, análise de CAC, LTV e ROI por canal. Você toma decisões baseadas em dados, não em achismo. É assim que se constrói a era de ouro da sua clínica.",
+        "Agora você sabe EXATAMENTE: quanto custa trazer 1 paciente, quanto cada canal retorna, qual campanha funciona, onde investir mais. Dashboard te mostra tudo em tempo real. Você para de 'achar' e começa a SABER. Como o Dr. Marcos (cardiologista) que escalou de R$ 47k/mês para R$ 183k/mês em 10 meses investindo nos canais certos, baseado em dados.",
     },
   ];
 
@@ -36,8 +36,8 @@ export default function Method() {
     <section className="section-padding bg-white">
       <div className="container-custom">
         <SectionTitle
-          title="O Método MedGM: Marketing que converte, comercial que retém."
-          subtitle="Não somos uma agência. Somos a consultoria que guia o médico de um cenário de incerteza para um de autoridade reconhecida, agenda cheia e crescimento previsível. Não apenas criamos campanhas — implementamos o sistema completo dentro da sua clínica."
+          title="O Método MedGM: Como levamos clínicas de 12 consultas/mês para 37/semana em 90 dias"
+          subtitle="Não vendemos 'pacote de posts' nem 'gestão de redes sociais'. Implementamos o sistema comercial completo que médicos com agenda cheia já usam — mas que 90% das clínicas desconhece. É por isso que funciona quando tudo mais falhou."
         />
 
         <div className="grid md:grid-cols-2 gap-8 mt-12">
