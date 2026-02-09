@@ -66,7 +66,7 @@ export default function Cases() {
             Mais de{" "}
             <span className="text-gold">200 cases de sucesso registrados</span>
           </h2>
-          <p className="text-2xl text-gray-400 font-montserrat max-w-3xl mx-auto">
+          <p className="text-2xl text-gray-400 font-body max-w-3xl mx-auto">
             Projetos com resultados acima da média são transformados em cases de
             sucesso. Conheça alguns deles abaixo.
           </p>
@@ -85,14 +85,14 @@ export default function Cases() {
             >
               <div className="bg-dark border-2 border-gold/30 rounded-3xl p-8 md:p-12 hover:border-gold/60 transition-all duration-500">
                 {/* Badge Especialidade */}
-                <div className="inline-block bg-gold/20 text-gold font-montserrat font-bold text-sm uppercase px-6 py-2 rounded-full mb-6">
+                <div className="inline-block bg-gold/20 text-gold font-body font-bold text-sm uppercase px-6 py-2 rounded-full mb-6">
                   {caseItem.specialty}
                 </div>
 
                 {/* Números Destaque */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                   <div className="bg-dark-deep border border-gold/20 rounded-2xl p-6">
-                    <p className="text-gray-400 font-montserrat text-sm uppercase mb-2">
+                    <p className="text-gray-400 font-body text-sm uppercase mb-2">
                       Antes
                     </p>
                     <p className="text-3xl md:text-4xl font-display font-bold text-white">
@@ -100,7 +100,7 @@ export default function Cases() {
                     </p>
                   </div>
                   <div className="bg-gold/10 border border-gold rounded-2xl p-6">
-                    <p className="text-gold font-montserrat text-sm uppercase mb-2">
+                    <p className="text-gold font-body text-sm uppercase mb-2">
                       Depois
                     </p>
                     <p className="text-3xl md:text-4xl font-display font-bold text-gold">
@@ -109,16 +109,16 @@ export default function Cases() {
                   </div>
                 </div>
 
-                <p className="text-xl text-gray-300 font-montserrat font-medium mb-8">
+                <p className="text-xl text-gray-300 font-body font-medium mb-8">
                   {caseItem.period}
                 </p>
 
                 {/* História */}
                 <div className="mb-8">
-                  <p className="text-lg text-gray-300 font-montserrat mb-4 leading-relaxed">
+                  <p className="text-lg text-gray-300 font-body mb-4 leading-relaxed">
                     {caseItem.story}
                   </p>
-                  <p className="text-lg text-gray-400 font-montserrat leading-relaxed">
+                  <p className="text-lg text-gray-400 font-body leading-relaxed">
                     {caseItem.challenge}
                   </p>
                 </div>
@@ -127,14 +127,14 @@ export default function Cases() {
                 <div className="bg-dark-deep border-l-4 border-gold rounded-r-xl p-6 relative">
                   <Quote className="absolute -top-2 -left-2 text-gold opacity-20" size={40} />
                   <blockquote className="relative z-10">
-                    <p className="text-xl text-white font-montserrat italic mb-6 leading-relaxed">
+                    <p className="text-xl text-white font-body italic mb-6 leading-relaxed">
                       &ldquo;{caseItem.quote}&rdquo;
                     </p>
                     <div>
                       <p className="text-gold font-display font-bold text-lg">
                         {caseItem.name}
                       </p>
-                      <p className="text-gray-400 font-montserrat text-sm">
+                      <p className="text-gray-400 font-body text-sm">
                         {caseItem.role}
                       </p>
                     </div>
@@ -155,7 +155,7 @@ export default function Cases() {
         >
           <a
             href="#form"
-            className="inline-flex items-center gap-3 bg-gold text-black font-montserrat font-bold text-xl uppercase px-16 py-6 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
+            className="inline-flex items-center gap-3 bg-gold text-dark font-body font-bold text-xl uppercase px-16 py-6 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
           >
             Ser o Próximo Case de Sucesso
           </a>

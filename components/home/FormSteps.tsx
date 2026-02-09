@@ -96,12 +96,12 @@ Cidade: ${formData.cidade}`;
                 </div>
 
                 {/* Título */}
-                <h3 className="text-2xl font-montserrat font-bold text-white mb-3">
+                <h3 className="text-2xl font-body font-bold text-white mb-3">
                   {step.title}
                 </h3>
 
                 {/* Descrição */}
-                <p className="text-gray-400 font-montserrat leading-relaxed">
+                <p className="text-gray-400 font-body leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -122,7 +122,7 @@ Cidade: ${formData.cidade}`;
             <div>
               <label
                 htmlFor="nome"
-                className="block text-white font-montserrat font-semibold mb-2"
+                className="block text-white font-body font-semibold mb-2"
               >
                 Nome completo *
               </label>
@@ -134,7 +134,7 @@ Cidade: ${formData.cidade}`;
                 onChange={(e) =>
                   setFormData({ ...formData, nome: e.target.value })
                 }
-                className="w-full bg-dark-deeper border border-gold/30 rounded-xl px-6 py-4 text-white font-montserrat focus:outline-none focus:border-gold transition-all"
+                className="w-full bg-dark-deeper border border-gold/30 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
                 placeholder="Dr. João Silva"
               />
             </div>
@@ -144,7 +144,7 @@ Cidade: ${formData.cidade}`;
               <div>
                 <label
                   htmlFor="telefone"
-                  className="block text-white font-montserrat font-semibold mb-2"
+                  className="block text-white font-body font-semibold mb-2"
                 >
                   Telefone/WhatsApp *
                 </label>
@@ -156,7 +156,7 @@ Cidade: ${formData.cidade}`;
                   onChange={(e) =>
                     setFormData({ ...formData, telefone: e.target.value })
                   }
-                  className="w-full bg-dark-deeper border border-gold/30 rounded-xl px-6 py-4 text-white font-montserrat focus:outline-none focus:border-gold transition-all"
+                  className="w-full bg-dark-deeper border border-gold/30 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
                   placeholder="(21) 99999-9999"
                 />
               </div>
@@ -164,7 +164,7 @@ Cidade: ${formData.cidade}`;
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-white font-montserrat font-semibold mb-2"
+                  className="block text-white font-body font-semibold mb-2"
                 >
                   Email *
                 </label>
@@ -176,7 +176,7 @@ Cidade: ${formData.cidade}`;
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="w-full bg-dark-deeper border border-gold/30 rounded-xl px-6 py-4 text-white font-montserrat focus:outline-none focus:border-gold transition-all"
+                  className="w-full bg-dark-deeper border border-gold/30 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
                   placeholder="contato@clinica.com.br"
                 />
               </div>
@@ -186,7 +186,7 @@ Cidade: ${formData.cidade}`;
             <div>
               <label
                 htmlFor="especialidade"
-                className="block text-white font-montserrat font-semibold mb-2"
+                className="block text-white font-body font-semibold mb-2"
               >
                 Especialidade *
               </label>
@@ -197,7 +197,7 @@ Cidade: ${formData.cidade}`;
                 onChange={(e) =>
                   setFormData({ ...formData, especialidade: e.target.value })
                 }
-                className="w-full bg-dark-deeper border border-gold/30 rounded-xl px-6 py-4 text-white font-montserrat focus:outline-none focus:border-gold transition-all"
+                className="w-full bg-dark-deeper border border-gold/30 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
               >
                 <option value="">Selecione...</option>
                 <option value="Dermatologia">Dermatologia</option>
@@ -217,7 +217,7 @@ Cidade: ${formData.cidade}`;
             <div>
               <label
                 htmlFor="faturamento"
-                className="block text-white font-montserrat font-semibold mb-2"
+                className="block text-white font-body font-semibold mb-2"
               >
                 Qual o faturamento mensal da sua clínica? *
               </label>
@@ -228,7 +228,7 @@ Cidade: ${formData.cidade}`;
                 onChange={(e) =>
                   setFormData({ ...formData, faturamento: e.target.value })
                 }
-                className="w-full bg-dark-deeper border border-gold/30 rounded-xl px-6 py-4 text-white font-montserrat focus:outline-none focus:border-gold transition-all"
+                className="w-full bg-dark-deeper border border-gold/30 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
               >
                 <option value="">Selecione...</option>
                 <option value="De 51 mil à 70 mil">De 51 mil à 70 mil</option>
@@ -245,7 +245,7 @@ Cidade: ${formData.cidade}`;
             <div>
               <label
                 htmlFor="cidade"
-                className="block text-white font-montserrat font-semibold mb-2"
+                className="block text-white font-body font-semibold mb-2"
               >
                 Cidade *
               </label>
@@ -257,7 +257,7 @@ Cidade: ${formData.cidade}`;
                 onChange={(e) =>
                   setFormData({ ...formData, cidade: e.target.value })
                 }
-                className="w-full bg-dark-deeper border border-gold/30 rounded-xl px-6 py-4 text-white font-montserrat focus:outline-none focus:border-gold transition-all"
+                className="w-full bg-dark-deeper border border-gold/30 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
                 placeholder="São Paulo - SP"
               />
             </div>
@@ -265,7 +265,7 @@ Cidade: ${formData.cidade}`;
             {/* Submit Button */}
             <motion.button
               type="submit"
-              className="w-full bg-gold text-black font-montserrat font-bold text-xl uppercase px-12 py-6 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
+              className="w-full bg-gold text-dark font-body font-bold text-xl uppercase px-12 py-6 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

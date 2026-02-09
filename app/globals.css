@@ -5,25 +5,18 @@
 @layer base {
   :root {
     --font-inter: 'Inter', sans-serif;
-    --font-playfair: 'Playfair Display', serif;
-    --font-bebas: 'Bebas Neue', cursive;
-    --font-montserrat: 'Montserrat', sans-serif;
+    --font-termina: 'Inter', sans-serif;
+    --color-gold: #CAAA82;
+    --color-gold-light: #FFEBC3;
+    --color-dark: #1A1A1A;
   }
 
   body {
-    @apply bg-white text-dark;
+    @apply bg-white text-dark font-body;
   }
 
-  h1 {
-    @apply font-display tracking-wide;
-  }
-
-  h2 {
-    @apply font-heading font-bold;
-  }
-
-  h3, h4, h5, h6 {
-    @apply font-sans;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
   }
 }
 
@@ -37,7 +30,7 @@
   }
 
   .btn-primary {
-    @apply relative overflow-hidden bg-gradient-to-r from-gold-dark to-gold text-dark-deep font-extrabold rounded-[40px] px-8 py-4 inline-flex items-center gap-2 shadow-gold-glow;
+    @apply relative overflow-hidden bg-gradient-to-r from-gold to-gold-light text-dark font-bold rounded-[40px] px-8 py-4 inline-flex items-center gap-2 shadow-gold-glow;
     background-size: 200% 100%;
     background-position: 100% 0;
     transition: background-position 0.7s ease, transform 0.3s ease;
@@ -49,7 +42,7 @@
   }
 
   .btn-secondary {
-    @apply border-2 border-gold text-gold bg-transparent rounded-[40px] px-8 py-4 hover:bg-gold hover:text-dark-deep transition-all duration-700 inline-flex items-center gap-2;
+    @apply border-2 border-gold text-gold bg-transparent rounded-[40px] px-8 py-4 hover:bg-gold hover:text-dark transition-all duration-700 inline-flex items-center gap-2;
   }
 
   .card {

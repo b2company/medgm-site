@@ -39,10 +39,10 @@ export default function Header() {
             <Image
               src="/Vector.png"
               alt="MedGM"
-              width={60}
-              height={30}
+              width={48}
+              height={24}
               priority
-              className="w-auto h-6 md:h-7"
+              className="w-auto h-4 md:h-5"
             />
           </Link>
 

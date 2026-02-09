@@ -101,7 +101,7 @@ export default function Services() {
             A MedGM estrutura o marketing da sua clínica com{" "}
             <span className="text-gold">soluções feitas sob medida</span>
           </h2>
-          <p className="text-2xl text-gray-400 font-montserrat max-w-3xl mx-auto">
+          <p className="text-2xl text-gray-400 font-body max-w-3xl mx-auto">
             Conheça todos os serviços que oferecemos para que sua clínica tenha
             mais resultados
           </p>
@@ -130,7 +130,7 @@ export default function Services() {
                 </h3>
 
                 {/* Subtítulo */}
-                <p className="text-gray-400 font-montserrat mb-6 text-lg">
+                <p className="text-gray-400 font-body mb-6 text-lg">
                   {service.subtitle}
                 </p>
 
@@ -139,7 +139,7 @@ export default function Services() {
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300 font-montserrat leading-relaxed">
+                      <span className="text-gray-300 font-body leading-relaxed">
                         {feature}
                       </span>
                     </li>
@@ -160,7 +160,7 @@ export default function Services() {
         >
           <a
             href="#form"
-            className="inline-flex items-center gap-3 bg-gold text-black font-montserrat font-bold text-xl uppercase px-16 py-6 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
+            className="inline-flex items-center gap-3 bg-gold text-dark font-body font-bold text-xl uppercase px-16 py-6 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
           >
             Impulsionar Meu Marketing
           </a>

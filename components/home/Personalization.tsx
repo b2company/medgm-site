@@ -5,7 +5,7 @@ import { Sparkles } from "lucide-react";
 
 export default function Personalization() {
   return (
-    <section className="bg-black py-20 md:py-32 relative overflow-hidden">
+    <section className="bg-dark py-20 md:py-32 relative overflow-hidden">
       {/* Background decorativo */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-3xl"></div>
@@ -43,7 +43,7 @@ export default function Personalization() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-2xl md:text-3xl text-gray-300 font-montserrat mb-12 max-w-3xl mx-auto"
+            className="text-2xl md:text-3xl text-gray-300 font-body mb-12 max-w-3xl mx-auto"
           >
             Você pode personalizar o plano que mais{" "}
             <span className="text-gold font-bold">
@@ -60,7 +60,7 @@ export default function Personalization() {
           >
             <a
               href="#form"
-              className="inline-flex items-center gap-3 bg-gold text-black font-montserrat font-bold text-xl uppercase px-16 py-6 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
+              className="inline-flex items-center gap-3 bg-gold text-dark font-body font-bold text-xl uppercase px-16 py-6 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
             >
               Agendar uma Reunião
             </a>

@@ -49,7 +49,7 @@ export default function Credentials() {
                 </div>
 
                 {/* Badge */}
-                <div className="inline-block bg-gold/20 text-gold font-montserrat font-bold text-sm uppercase px-6 py-2 rounded-full mb-6">
+                <div className="inline-block bg-gold/20 text-gold font-body font-bold text-sm uppercase px-6 py-2 rounded-full mb-6">
                   {credential.badge}
                 </div>
 
@@ -59,7 +59,7 @@ export default function Credentials() {
                 </h3>
 
                 {/* Descrição */}
-                <p className="text-gray-400 font-montserrat leading-relaxed">
+                <p className="text-gray-400 font-body leading-relaxed">
                   {credential.description}
                 </p>
               </div>

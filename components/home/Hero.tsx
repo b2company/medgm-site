@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative bg-black text-white min-h-[90vh] flex items-center pt-24 pb-16">
+    <section className="relative bg-dark text-white min-h-[90vh] flex items-center pt-24 pb-16">
       <div className="container-custom relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Qualificação no topo */}
@@ -15,7 +15,7 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <p className="text-white font-montserrat font-medium text-lg tracking-wider uppercase">
+            <p className="text-white font-body font-medium text-lg tracking-wider uppercase">
               EXCLUSIVO PARA CLÍNICAS QUE FATURAM ACIMA DE R$ 100 MIL AO MÊS.
             </p>
           </motion.div>
@@ -39,7 +39,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-2xl text-gray-300 mb-12 text-center font-montserrat font-normal max-w-4xl mx-auto"
+            className="text-2xl text-gray-300 mb-12 text-center font-body font-normal max-w-4xl mx-auto"
           >
             Assessoria completa de marketing e vendas para clínicas médicas que querem crescer de forma previsível
           </motion.p>
@@ -53,7 +53,7 @@ export default function Hero() {
           >
             <motion.a
               href="#form"
-              className="bg-gold text-black font-montserrat font-bold text-lg uppercase px-12 py-5 rounded-full hover:bg-gold-light transition-all duration-300 inline-flex items-center gap-3 shadow-gold-glow"
+              className="bg-gold text-dark font-body font-bold text-lg uppercase px-12 py-5 rounded-full hover:bg-gold-light transition-all duration-300 inline-flex items-center gap-3 shadow-gold-glow"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -65,7 +65,7 @@ export default function Hero() {
               href="https://wa.me/5521999999999?text=Olá!%20Já%20quero%20contratar"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-transparent border-2 border-gold text-gold font-montserrat font-bold text-lg uppercase px-12 py-5 rounded-full hover:bg-gold hover:text-black transition-all duration-300 inline-flex items-center gap-3"
+              className="bg-transparent border-2 border-gold text-gold font-body font-bold text-lg uppercase px-12 py-5 rounded-full hover:bg-gold hover:text-dark transition-all duration-300 inline-flex items-center gap-3"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -83,7 +83,7 @@ export default function Hero() {
             <p className="text-gold font-display text-6xl md:text-7xl font-bold mb-2">
               R$ 47,3 Milhões
             </p>
-            <p className="text-gray-400 font-montserrat text-xl uppercase tracking-wide">
+            <p className="text-gray-400 font-body text-xl uppercase tracking-wide">
               Receita gerada para nossos clientes médicos
             </p>
           </motion.div>

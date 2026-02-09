@@ -36,7 +36,7 @@ const methodSteps = [
 
 export default function ScientificMethod() {
   return (
-    <section className="bg-black py-20 md:py-32 relative overflow-hidden">
+    <section className="bg-dark py-20 md:py-32 relative overflow-hidden">
       {/* Background decorativo */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-96 h-96 bg-gold rounded-full blur-3xl"></div>
@@ -57,7 +57,7 @@ export default function ScientificMethod() {
             que sua clínica{" "}
             <span className="text-gold">nunca pare de ter pacientes</span>
           </h2>
-          <p className="text-2xl text-gray-400 font-montserrat max-w-3xl mx-auto">
+          <p className="text-2xl text-gray-400 font-body max-w-3xl mx-auto">
             Se você não segui-lo, ela não vai sair do lugar
           </p>
         </motion.div>
@@ -93,7 +93,7 @@ export default function ScientificMethod() {
                     </h3>
 
                     {/* Descrição */}
-                    <p className="text-gray-400 font-montserrat text-lg leading-relaxed">
+                    <p className="text-gray-400 font-body text-lg leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -118,7 +118,7 @@ export default function ScientificMethod() {
         >
           <a
             href="#form"
-            className="inline-flex items-center gap-3 bg-gold text-black font-montserrat font-bold text-xl uppercase px-16 py-6 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
+            className="inline-flex items-center gap-3 bg-gold text-dark font-body font-bold text-xl uppercase px-16 py-6 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
           >
             Impulsionar Meu Marketing Médico
           </a>
