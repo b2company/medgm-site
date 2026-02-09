@@ -2,92 +2,49 @@
 
 import { motion } from "framer-motion";
 import {
-  Users,
-  Megaphone,
-  Database,
-  FileText,
   TrendingUp,
+  Megaphone,
+  FileText,
   BarChart3,
-  Headphones,
+  Users,
 } from "lucide-react";
 
 const services = [
   {
-    icon: Users,
-    title: "Soluções Comerciais",
-    subtitle: "A expertise do nosso time de vendas à disposição da sua clínica",
-    features: [
-      "Estruturamos todo o seu comercial do zero",
-      "Treinamos e desenvolvemos sua secretária e equipe",
-      "Fornecemos scripts de conversão para vendas por WhatsApp",
-    ],
+    icon: TrendingUp,
+    title: "Gestão de Anúncios",
+    description:
+      "Tráfego pago no Google e Meta para atrair pacientes qualificados ao seu funil de agendamentos. Previsibilidade e retorno mensurável.",
   },
   {
     icon: Megaphone,
     title: "Criativos & Copywriting",
-    subtitle:
-      "Seus anúncios criados pelos copywriters e designers especializados em medicina",
-    features: [
-      "Mais foco em conversão, não apenas em estética",
-      "Criados com base na experiência de 200+ clínicas atendidas",
-      "Feitos por profissionais que recebem treinamento constantemente",
-    ],
-  },
-  {
-    icon: Database,
-    title: "CRM Médico",
-    subtitle: "Gerencie o relacionamento com seu paciente em um só lugar",
-    features: [
-      "Visualize todo o seu funil de vendas e consultas",
-      "Mantenha conexão com seus pacientes e aumente retenção",
-      "Faça upsell de procedimentos e campanhas promocionais",
-    ],
+    description:
+      "Anúncios e materiais criados por especialistas em marketing médico. Foco em conversão, com base na experiência de mais de 250 projetos.",
   },
   {
     icon: FileText,
     title: "Landing Pages",
-    subtitle: "Landing pages projetadas para trazer oportunidades de consultas",
-    features: [
-      "Feitas com as melhores práticas do mercado médico",
-      "Fácil de implementar e editar conforme necessário",
-      "Projetadas para alta conversão e compliance com CFM",
-    ],
-  },
-  {
-    icon: TrendingUp,
-    title: "Gestão de Anúncios",
-    subtitle: "Gestão dos seus anúncios online no Google e Meta",
-    features: [
-      "Atraia seus pacientes ideais para seu funil de agendamentos",
-      "Abasteça seu atendimento com oportunidades de consulta",
-      "Tenha mais previsibilidade e mensure o retorno do seu investimento",
-    ],
+    description:
+      "Páginas projetadas para converter visitantes em agendamentos. Compliance total com o CFM. Fáceis de implementar e editar.",
   },
   {
     icon: BarChart3,
     title: "Business Intelligence",
-    subtitle: "Gerencie as principais métricas do seu negócio médico",
-    features: [
-      "Tenha controle sobre os principais indicadores da sua clínica",
-      "Transforme dados em insights e insights em boas decisões",
-      "Acesse os dados a qualquer momento, em qualquer dispositivo",
-    ],
+    description:
+      "Dashboards com os indicadores que importam: custo por lead, agendamentos, taxa de conversão, receita. Acessíveis a qualquer momento.",
   },
   {
-    icon: Headphones,
-    title: "Gestão e Atendimento",
-    subtitle: "O seu marketing gerenciado por especialistas em growth médico",
-    features: [
-      "Especialistas treinados, geridos e desenvolvidos por nós",
-      "Atendimento ágil e eficaz dedicado à sua clínica",
-      "A expertise da MedGM trabalhando na sua empresa",
-    ],
+    icon: Users,
+    title: "Estruturação Comercial",
+    description:
+      "Treinamento de secretárias, scripts de conversão para WhatsApp e processos de agendamento. Estruturamos o comercial da sua clínica para que o growth se converta em consultas.",
   },
 ];
 
 export default function Services() {
   return (
-    <section className="bg-dark-deep py-20 md:py-32" id="services">
+    <section className="bg-[#0A0A0A] py-20 md:py-32">
       <div className="container-custom">
         {/* Título */}
         <motion.div
@@ -95,20 +52,18 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-6"
+          className="text-center mb-6 max-w-4xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight max-w-5xl mx-auto">
-            A MedGM estrutura o marketing da sua clínica com{" "}
-            <span className="text-gold">soluções feitas sob medida</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4 leading-tight">
+            Estruturamos o growth da sua clínica com soluções feitas sob medida.
           </h2>
-          <p className="text-2xl text-gray-400 font-body max-w-3xl mx-auto">
-            Conheça todos os serviços que oferecemos para que sua clínica tenha
-            mais resultados
+          <p className="text-lg md:text-xl font-body text-gray-400">
+            Tenha um braço a mais para ajudar seu time ou terceirize todo o seu marketing com a MedGM. Sem preocupação com contratação, gestão de equipe ou burocracias.
           </p>
         </motion.div>
 
         {/* Grid de Serviços */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -118,53 +73,25 @@ export default function Services() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <div className="bg-dark border-2 border-gold/20 rounded-2xl p-8 hover:border-gold/60 transition-all duration-500 h-full">
+              <div className="bg-[#111] border border-white/10 rounded-2xl p-8 hover:border-gold/40 transition-all duration-500 h-full">
                 {/* Ícone */}
                 <div className="bg-gold/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gold/20 group-hover:scale-110 transition-all duration-300">
                   <service.icon className="text-gold" size={32} />
                 </div>
 
                 {/* Título */}
-                <h3 className="text-2xl font-display font-bold text-white mb-3">
+                <h3 className="text-xl font-display font-bold text-white mb-3">
                   {service.title}
                 </h3>
 
-                {/* Subtítulo */}
-                <p className="text-gray-400 font-body mb-6 text-lg">
-                  {service.subtitle}
+                {/* Descrição */}
+                <p className="text-base font-body text-gray-400 leading-relaxed">
+                  {service.description}
                 </p>
-
-                {/* Features */}
-                <ul className="space-y-3">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-300 font-body leading-relaxed">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* CTA Final */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mt-16"
-        >
-          <a
-            href="#form"
-            className="inline-flex items-center gap-3 bg-gold text-dark font-body font-bold text-xl uppercase px-16 py-6 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
-          >
-            Impulsionar Meu Marketing
-          </a>
-        </motion.div>
       </div>
     </section>
   );
