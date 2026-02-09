@@ -44,7 +44,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="bg-[#0A0A0A] py-20 md:py-32 relative overflow-hidden">
+    <section className="bg-[#0A0A0A] py-12 md:py-20 lg:py-32 relative overflow-hidden">
       {/* Separador visual superior */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
 
@@ -76,7 +76,7 @@ export default function Services() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group"
             >
-              <div className="bg-[#111] border border-white/10 rounded-2xl p-8 hover:border-gold/40 transition-all duration-500 h-full hover:shadow-xl hover:shadow-gold/5">
+              <div className="bg-[#111] border border-white/10 rounded-xl md:rounded-2xl p-5 md:p-8 hover:border-gold/40 transition-all duration-500 h-full hover:shadow-xl hover:shadow-gold/5">
                 {/* Ícone */}
                 <div className="bg-gold/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gold/20 group-hover:scale-110 transition-all duration-300">
                   <service.icon className="text-gold" size={32} />

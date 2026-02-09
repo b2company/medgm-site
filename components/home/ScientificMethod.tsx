@@ -31,7 +31,7 @@ const methodSteps = [
 
 export default function ScientificMethod() {
   return (
-    <section className="bg-dark py-20 md:py-32 relative overflow-hidden">
+    <section className="bg-dark py-12 md:py-20 lg:py-32 relative overflow-hidden">
       {/* Separador visual superior */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
 

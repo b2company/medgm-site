@@ -29,7 +29,7 @@ export default function Solution() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-[#111] border border-red-500/20 rounded-2xl p-8 relative group hover:border-red-500/40 transition-all duration-300"
+              className="bg-[#111] border border-red-500/20 rounded-xl md:rounded-2xl p-5 md:p-8 relative group hover:border-red-500/40 transition-all duration-300"
             >
               <div className="flex items-start gap-4 mb-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center group-hover:bg-red-500/20 transition-colors">
@@ -50,7 +50,7 @@ export default function Solution() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-[#111] border border-red-500/20 rounded-2xl p-8 relative group hover:border-red-500/40 transition-all duration-300"
+              className="bg-[#111] border border-red-500/20 rounded-xl md:rounded-2xl p-5 md:p-8 relative group hover:border-red-500/40 transition-all duration-300"
             >
               <div className="flex items-start gap-4 mb-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center group-hover:bg-red-500/20 transition-colors">
