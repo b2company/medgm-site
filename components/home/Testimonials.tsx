@@ -44,7 +44,7 @@ export default function Testimonials() {
             >
               <Quote className="text-gold opacity-20 mb-4" size={32} />
               <p className="text-base md:text-lg font-body text-white mb-4 leading-relaxed">
-                "{testimonial.text}"
+                &ldquo;{testimonial.text}&rdquo;
               </p>
               <p className="text-sm font-body font-semibold text-gold">
                 {testimonial.author}
