@@ -69,11 +69,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${termina.variable}`}>
+    <html lang="pt-BR" className={`${inter.variable} ${termina.variable} overflow-x-hidden`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="antialiased font-body">
+      <body className="antialiased font-body overflow-x-hidden">
         {/* Meta Pixel Code */}
         <Script
           id="meta-pixel"
@@ -88,8 +88,11 @@ export default function RootLayout({
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '1376176936827293');
-              fbq('track', 'PageView');
+              if (!window._fbPixelInitialized) {
+                fbq('init', '1376176936827293');
+                fbq('track', 'PageView');
+                window._fbPixelInitialized = true;
+              }
             `,
           }}
         />

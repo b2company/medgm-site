@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { TrendingUp, Megaphone, FileText, BarChart3, Users } from "lucide-react";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 const services = [
   {
@@ -231,14 +232,12 @@ export default function Servicos() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <a
-                href="https://wa.me/5521965116943?text=Olá!%20Quero%20agendar%20diagnóstico%20gratuito"
-                target="_blank"
-                rel="noopener noreferrer"
+              <WhatsAppLink
+                message="Olá! Quero agendar diagnóstico gratuito"
                 className="inline-block bg-gold text-dark font-body font-bold text-lg px-12 py-5 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
               >
                 Agendar Diagnóstico Gratuito
-              </a>
+              </WhatsAppLink>
             </motion.div>
           </div>
         </div>

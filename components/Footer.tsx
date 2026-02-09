@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -69,9 +70,12 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li className="flex items-center gap-2">
                   <Phone size={18} className="text-gold" />
-                  <a href="https://wa.me/5521965116943" className="hover:text-gold transition-colors">
+                  <WhatsAppLink
+                    message="Olá! Quero falar com a MedGM"
+                    className="hover:text-gold transition-colors"
+                  >
                     +55 21 96511-6943
-                  </a>
+                  </WhatsAppLink>
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail size={18} className="text-gold" />

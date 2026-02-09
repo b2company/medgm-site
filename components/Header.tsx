@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,14 +63,12 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a
-              href="https://wa.me/5521965116943?text=Olá! Quero agendar meu diagnóstico gratuito"
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppLink
+              message="Olá! Quero agendar meu diagnóstico gratuito"
               className="btn-primary text-sm"
             >
               Diagnóstico Gratuito
-            </a>
+            </WhatsAppLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -103,14 +102,12 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <a
-                href="https://wa.me/5521965116943?text=Olá! Quero agendar meu diagnóstico gratuito"
-                target="_blank"
-                rel="noopener noreferrer"
+              <WhatsAppLink
+                message="Olá! Quero agendar meu diagnóstico gratuito"
                 className="btn-primary justify-center"
               >
                 Diagnóstico Gratuito
-              </a>
+              </WhatsAppLink>
             </nav>
           </motion.div>
         )}

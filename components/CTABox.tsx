@@ -2,12 +2,13 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 interface CTABoxProps {
   title: string;
   description: string;
   buttonText: string;
-  buttonHref?: string;
+  buttonMessage?: string;
   dark?: boolean;
 }
 
@@ -15,7 +16,7 @@ export default function CTABox({
   title,
   description,
   buttonText,
-  buttonHref = "https://wa.me/5521965116943?text=Olá! Quero saber mais sobre os serviços da MedGM",
+  buttonMessage = "Olá! Quero saber mais sobre os serviços da MedGM",
   dark = false,
 }: CTABoxProps) {
   return (
@@ -33,10 +34,10 @@ export default function CTABox({
       <p className={`text-lg mb-6 ${dark ? "text-gray-300" : "text-gray-700"}`}>
         {description}
       </p>
-      <a href={buttonHref} target="_blank" rel="noopener noreferrer" className="btn-primary">
+      <WhatsAppLink message={buttonMessage} className="btn-primary">
         {buttonText}
         <ArrowRight size={20} />
-      </a>
+      </WhatsAppLink>
     </motion.div>
   );
 }

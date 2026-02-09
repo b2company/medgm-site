@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { Metadata } from "next";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 export default function Sobre() {
   const numbers = [
@@ -195,14 +196,12 @@ export default function Sobre() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <a
-                href="https://wa.me/5521965116943?text=Olá!%20Quero%20falar%20com%20a%20MedGM"
-                target="_blank"
-                rel="noopener noreferrer"
+              <WhatsAppLink
+                message="Olá! Quero falar com a MedGM"
                 className="inline-block bg-gold text-dark font-body font-bold text-lg px-12 py-5 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
               >
                 Falar com a MedGM
-              </a>
+              </WhatsAppLink>
             </motion.div>
           </div>
         </div>

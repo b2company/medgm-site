@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { FileText, Phone, Calendar } from "lucide-react";
 import { useState } from "react";
+import { useUTM } from "@/hooks/useUTM";
 
 const steps = [
   {
@@ -29,6 +30,7 @@ const steps = [
 ];
 
 export default function FormSteps() {
+  const { addUTMToMessage } = useUTM();
   const [formData, setFormData] = useState({
     nome: "",
     telefone: "",
@@ -49,8 +51,9 @@ Especialidade: ${formData.especialidade}
 Faturamento mensal: ${formData.faturamento}
 Cidade: ${formData.cidade}`;
 
+    const messageWithUTM = addUTMToMessage(message);
     window.open(
-      `https://wa.me/5521965116943?text=${encodeURIComponent(message)}`,
+      `https://wa.me/5521965116943?text=${encodeURIComponent(messageWithUTM)}`,
       "_blank"
     );
   };

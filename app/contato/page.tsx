@@ -2,32 +2,10 @@
 
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { useState } from "react";
+import WhatsAppLink from "@/components/WhatsAppLink";
+import Script from "next/script";
 
 export default function Contato() {
-  const [formData, setFormData] = useState({
-    nome: "",
-    email: "",
-    whatsapp: "",
-    especialidade: "",
-    mensagem: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const message = `Olá! Vim pelo site MedGM.
-
-Nome: ${formData.nome}
-Email: ${formData.email}
-WhatsApp: ${formData.whatsapp}
-Especialidade: ${formData.especialidade}
-
-Mensagem: ${formData.mensagem}`;
-
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/5521965116943?text=${encodedMessage}`, "_blank");
-  };
-
   return (
     <main className="bg-dark min-h-screen">
       {/* Hero */}
@@ -73,9 +51,12 @@ Mensagem: ${formData.mensagem}`;
                   </div>
                   <div>
                     <h3 className="text-lg font-body font-semibold text-white mb-1">WhatsApp</h3>
-                    <a href="https://wa.me/5521965116943" className="text-gray-300 hover:text-gold transition-colors">
+                    <WhatsAppLink
+                      message="Olá! Quero falar com a MedGM"
+                      className="text-gray-300 hover:text-gold transition-colors"
+                    >
                       +55 21 96511-6943
-                    </a>
+                    </WhatsAppLink>
                   </div>
                 </motion.div>
 
@@ -116,7 +97,7 @@ Mensagem: ${formData.mensagem}`;
               </div>
             </div>
 
-            {/* Formulário */}
+            {/* Formulário Embedado */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -124,106 +105,19 @@ Mensagem: ${formData.mensagem}`;
               transition={{ duration: 0.8 }}
               className="lg:col-span-2"
             >
-              <form onSubmit={handleSubmit} className="bg-[#111] border border-white/10 rounded-2xl p-8 space-y-6">
-                <div>
-                  <label htmlFor="nome" className="block text-white font-body font-semibold mb-2">
-                    Nome Completo *
-                  </label>
-                  <input
-                    type="text"
-                    id="nome"
-                    required
-                    value={formData.nome}
-                    onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
-                    className="w-full bg-dark border border-white/10 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
-                    placeholder="Dr. João Silva"
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="email" className="block text-white font-body font-semibold mb-2">
-                      E-mail *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full bg-dark border border-white/10 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
-                      placeholder="contato@clinica.com.br"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="whatsapp" className="block text-white font-body font-semibold mb-2">
-                      WhatsApp *
-                    </label>
-                    <input
-                      type="tel"
-                      id="whatsapp"
-                      required
-                      value={formData.whatsapp}
-                      onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                      className="w-full bg-dark border border-white/10 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
-                      placeholder="+55 21 96511-6943"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="especialidade" className="block text-white font-body font-semibold mb-2">
-                    Especialidade *
-                  </label>
-                  <select
-                    id="especialidade"
-                    required
-                    value={formData.especialidade}
-                    onChange={(e) => setFormData({ ...formData, especialidade: e.target.value })}
-                    className="w-full bg-dark border border-white/10 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
-                  >
-                    <option value="">Selecione...</option>
-                    <option value="Dermatologia">Dermatologia</option>
-                    <option value="Ortopedia">Ortopedia</option>
-                    <option value="Cardiologia">Cardiologia</option>
-                    <option value="Cirurgia Plástica">Cirurgia Plástica</option>
-                    <option value="Clínico Geral">Clínico Geral</option>
-                    <option value="Pediatria">Pediatria</option>
-                    <option value="Ginecologia">Ginecologia</option>
-                    <option value="Outra">Outra</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="mensagem" className="block text-white font-body font-semibold mb-2">
-                    Mensagem *
-                  </label>
-                  <textarea
-                    id="mensagem"
-                    required
-                    rows={5}
-                    value={formData.mensagem}
-                    onChange={(e) => setFormData({ ...formData, mensagem: e.target.value })}
-                    className="w-full bg-dark border border-white/10 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all resize-none"
-                    placeholder="Conte-nos sobre sua clínica..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-gold text-dark font-body font-bold text-lg uppercase px-12 py-5 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
-                >
-                  Enviar Mensagem
-                </button>
-
-                <p className="text-sm text-gray-400 text-center">
-                  Ao enviar, você concorda em receber contato da MedGM via e-mail e WhatsApp.
-                </p>
-                <p className="text-sm text-gray-400 text-center">
-                  Atendemos todo o Brasil com consultoria 100% remota via reuniões online.
-                </p>
-              </form>
+              <div className="bg-[#111] border border-white/10 rounded-2xl p-8">
+                <iframe
+                  src="https://admin.b2company.co/widget/survey/lgr3ErIPvgmEaTq7ZsO2"
+                  style={{ border: 'none', width: '100%' }}
+                  scrolling="no"
+                  id="lgr3ErIPvgmEaTq7ZsO2"
+                  title="Formulário de Contato MedGM"
+                />
+                <Script
+                  src="https://admin.b2company.co/js/form_embed.js"
+                  strategy="afterInteractive"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
