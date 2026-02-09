@@ -57,10 +57,10 @@ export default function Services() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20 max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4 leading-tight">
             Estruturamos o growth da sua clínica com soluções feitas sob medida.
           </h2>
-          <p className="text-lg md:text-xl font-body text-gray-400">
+          <p className="text-base md:text-lg font-body text-gray-400">
             Tenha um braço a mais para ajudar seu time ou terceirize todo o seu marketing com a MedGM. Sem preocupação com contratação, gestão de equipe ou burocracias.
           </p>
         </motion.div>

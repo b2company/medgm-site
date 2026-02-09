@@ -1,5 +1,4 @@
 import Hero from "@/components/home/Hero";
-import Stats from "@/components/home/Stats";
 import Problem from "@/components/home/Problem";
 import Solution from "@/components/home/Solution";
 import ScientificMethod from "@/components/home/ScientificMethod";
@@ -14,7 +13,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Stats />
       <Problem />
       <Solution />
       <ScientificMethod />

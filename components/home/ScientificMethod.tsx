@@ -47,10 +47,10 @@ export default function ScientificMethod() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20 max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4 leading-tight">
             Existe um método para que sua clínica nunca pare de ter pacientes.
           </h2>
-          <p className="text-xl md:text-2xl font-body text-gray-400">
+          <p className="text-lg md:text-xl font-body text-gray-400">
             Se você não segui-lo, ela não vai sair do lugar.
           </p>
         </motion.div>

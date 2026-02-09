@@ -26,7 +26,7 @@ export default function Problem() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-16 text-center"
+            className="text-3xl md:text-4xl font-display font-bold text-white mb-16 text-center"
           >
             Se isso soa familiar, você não está sozinho.
           </motion.h2>
