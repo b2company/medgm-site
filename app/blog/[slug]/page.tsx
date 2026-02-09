@@ -83,7 +83,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-8 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-8 leading-tight">
               {post.title}
             </h1>
 

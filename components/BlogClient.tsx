@@ -32,7 +32,7 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
         <div className="absolute inset-0 bg-black/30 z-0"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display mb-6">
               Blog <span className="text-gold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">MedGM</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 font-light">

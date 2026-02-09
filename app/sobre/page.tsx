@@ -44,7 +44,7 @@ export default function Sobre() {
         <div className="absolute inset-0 bg-black/30 z-0"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif mb-8 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display mb-8 leading-tight">
               Nascemos para trazer de volta a{" "}
               <span className="text-gold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">era de ouro da medicina</span>
             </h1>

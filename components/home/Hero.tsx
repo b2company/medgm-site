@@ -8,16 +8,18 @@ export default function Hero() {
     <section className="relative bg-dark text-white min-h-[90vh] flex items-center pt-24 pb-16">
       <div className="container-custom relative z-10">
         <div className="max-w-6xl mx-auto">
-          {/* Qualificação no topo */}
+          {/* Qualificação no topo com tarja */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="flex justify-center mb-12"
           >
-            <p className="text-white font-body font-medium text-lg tracking-wider uppercase">
-              EXCLUSIVO PARA CLÍNICAS QUE FATURAM ACIMA DE R$ 100 MIL AO MÊS.
-            </p>
+            <div className="inline-block bg-gradient-to-r from-gold to-gold-light px-8 py-4 rounded-full border-2 border-gold-light shadow-gold-glow">
+              <p className="text-dark font-body font-bold text-base md:text-lg tracking-wide uppercase">
+                EXCLUSIVO PARA CLÍNICAS QUE FATURAM ACIMA DE R$ 100 MIL AO MÊS
+              </p>
+            </div>
           </motion.div>
 
           {/* Título principal */}
