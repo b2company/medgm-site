@@ -26,7 +26,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Grid de duas colunas */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Coluna esquerda - Conteúdo */}
           <div className="text-center lg:text-left">
             {/* Headline */}
@@ -34,7 +34,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-light text-white mb-8 leading-[1.1] tracking-tight"
+              className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-display font-light text-white mb-6 leading-[1.1] tracking-tight"
             >
               Profissional da saúde não precisa aprender marketing.{" "}
               <span className="text-white">
@@ -47,7 +47,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg md:text-xl text-[#888] mb-12 font-body font-light leading-relaxed"
+              className="text-lg md:text-xl text-[#888] mb-10 font-body font-light leading-relaxed"
             >
               Assessoria de growth exclusiva para clínicas médicas. Desde 2021 estruturando o crescimento de mais de 250 projetos na área da saúde.
             </motion.p>
@@ -57,11 +57,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center"
             >
               <motion.a
                 href="#form"
-                className="bg-transparent border-2 border-gold text-gold font-body font-semibold text-base md:text-lg px-12 py-5 rounded-full hover:bg-gold/10 transition-all duration-300 inline-flex items-center gap-3"
+                className="bg-transparent border-2 border-gold text-gold font-body font-semibold text-base px-10 py-4 rounded-full hover:bg-gold/10 transition-all duration-300 inline-flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -73,7 +73,7 @@ export default function Hero() {
                 href="https://wa.me/5521965116943?text=Olá!%20Quero%20agendar%20diagnóstico%20gratuito"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gold text-dark font-body font-bold text-base md:text-lg px-12 py-5 rounded-full hover:bg-gold-light transition-all duration-300 inline-flex items-center gap-3 shadow-gold-glow"
+                className="bg-gold text-dark font-body font-bold text-base px-10 py-4 rounded-full hover:bg-gold-light transition-all duration-300 inline-flex items-center gap-3 shadow-gold-glow"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -87,17 +87,17 @@ export default function Hero() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex justify-center lg:justify-end"
+            className="flex justify-center lg:justify-end order-first lg:order-last"
           >
-            <div className="relative w-full max-w-lg">
+            <div className="relative w-full">
               <Image
                 src="/fundadores.png"
                 alt="Fundadores da MedGM"
-                width={600}
-                height={600}
+                width={1200}
+                height={800}
                 priority
                 quality={100}
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-cover rounded-2xl"
               />
             </div>
           </motion.div>
