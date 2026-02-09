@@ -11,17 +11,26 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="container-custom relative z-10">
-        {/* Badge superior centralizado */}
+        {/* Tarja superior centralizada */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="flex justify-center mb-12"
         >
-          <div className="inline-block bg-gradient-to-r from-gold to-gold-light px-8 py-4 rounded-full border-2 border-gold-light shadow-gold-glow">
-            <p className="text-dark font-body font-bold text-sm md:text-base tracking-wide uppercase">
-              EXCLUSIVO PARA CLÍNICAS QUE FATURAM ACIMA DE R$ 50 MIL POR MÊS
-            </p>
+          <div className="relative">
+            {/* Linha superior */}
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent mb-3"></div>
+
+            {/* Tarja */}
+            <div className="px-6 py-2">
+              <p className="text-gold font-body font-semibold text-xs md:text-sm tracking-[0.2em] uppercase">
+                EXCLUSIVO PARA CLÍNICAS QUE FATURAM ACIMA DE R$ 50 MIL POR MÊS
+              </p>
+            </div>
+
+            {/* Linha inferior */}
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent mt-3"></div>
           </div>
         </motion.div>
 
