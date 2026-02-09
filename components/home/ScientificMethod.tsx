@@ -31,9 +31,12 @@ const methodSteps = [
 
 export default function ScientificMethod() {
   return (
-    <section className="bg-dark py-20 md:py-32 relative">
-      {/* Textura sutil */}
-      <div className="absolute inset-0 opacity-5"></div>
+    <section className="bg-dark py-20 md:py-32 relative overflow-hidden">
+      {/* Separador visual superior */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-dark to-[#0A0A0A] pointer-events-none"></div>
 
       <div className="container-custom relative z-10">
         {/* Título */}
@@ -42,9 +45,9 @@ export default function ScientificMethod() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-6 max-w-4xl mx-auto"
+          className="text-center mb-20 max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4 leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6 leading-tight">
             Existe um método para que sua clínica nunca pare de ter pacientes.
           </h2>
           <p className="text-xl md:text-2xl font-body text-gray-400">
@@ -53,7 +56,7 @@ export default function ScientificMethod() {
         </motion.div>
 
         {/* Grid 2x2 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {methodSteps.map((step, index) => (
             <motion.div
               key={step.number}
@@ -63,19 +66,22 @@ export default function ScientificMethod() {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className="relative group"
             >
-              <div className="bg-[#111] border border-white/10 rounded-2xl p-8 hover:border-gold/40 transition-all duration-500 h-full">
+              <div className="bg-[#111] border border-white/10 rounded-2xl p-10 hover:border-gold/40 transition-all duration-500 h-full hover:shadow-xl hover:shadow-gold/5">
                 {/* Número grande */}
-                <div className="text-7xl font-display font-bold text-[#FFEBC3] mb-4 opacity-90">
+                <div className="text-8xl font-display font-bold text-gold mb-6 opacity-90 group-hover:opacity-100 transition-opacity">
                   {step.number}
                 </div>
 
+                {/* Linha decorativa */}
+                <div className="h-px w-16 bg-gold/30 mb-4 group-hover:w-24 transition-all duration-300"></div>
+
                 {/* Título */}
-                <h3 className="text-2xl font-display font-bold text-white mb-3">
+                <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-4 group-hover:text-gold-light transition-colors">
                   {step.title}
                 </h3>
 
                 {/* Descrição */}
-                <p className="text-base font-body text-gray-400 leading-relaxed">
+                <p className="text-base md:text-lg font-body text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
                   {step.description}
                 </p>
               </div>
@@ -83,6 +89,9 @@ export default function ScientificMethod() {
           ))}
         </div>
       </div>
+
+      {/* Separador visual inferior */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
     </section>
   );
 }
