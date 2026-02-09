@@ -87,16 +87,16 @@ export default function Hero() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative flex justify-center lg:justify-end order-first lg:order-last h-[400px] lg:h-[700px]"
+            className="relative flex justify-center lg:justify-end order-first lg:order-last"
           >
-            <div className="relative w-full h-full max-w-3xl">
+            <div className="relative w-full h-[600px] lg:h-[800px] xl:h-[900px]">
               <Image
                 src="/fundadores.png"
                 alt="Fundadores da MedGM"
                 fill
                 priority
                 quality={100}
-                className="object-contain object-bottom lg:object-center-right"
+                className="object-contain object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
