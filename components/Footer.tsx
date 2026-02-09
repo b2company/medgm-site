@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-dark text-white">
       <div className="border-t-2 border-gold">
         <div className="container-custom py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Navegação */}
             <div>
               <h3 className="text-gold font-bold text-lg mb-4">Navegação</h3>
@@ -36,28 +36,6 @@ export default function Footer() {
                 <li>
                   <Link href="/contato" className="hover:text-gold transition-colors">
                     Contato
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Serviços */}
-            <div>
-              <h3 className="text-gold font-bold text-lg mb-4">Serviços</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/servicos#start" className="hover:text-gold transition-colors">
-                    Plano Start
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/servicos#select" className="hover:text-gold transition-colors">
-                    Plano Select
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/servicos#exclusive" className="hover:text-gold transition-colors">
-                    Plano Exclusive
                   </Link>
                 </li>
               </ul>
@@ -91,8 +69,8 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li className="flex items-center gap-2">
                   <Phone size={18} className="text-gold" />
-                  <a href="https://wa.me/5521999999999" className="hover:text-gold transition-colors">
-                    (21) 99999-9999
+                  <a href="https://wa.me/5521965116943" className="hover:text-gold transition-colors">
+                    +55 21 96511-6943
                   </a>
                 </li>
                 <li className="flex items-center gap-2">
@@ -146,7 +124,7 @@ export default function Footer() {
       <div className="border-t border-gold/20">
         <div className="container-custom py-6">
           <p className="text-center text-sm text-gray-400">
-            © {currentYear} MedGM — Consultoria de Marketing Médico. Todos os direitos reservados.
+            © {currentYear} MedGM. Assessoria de Growth para Clínicas Médicas.
           </p>
         </div>
       </div>
