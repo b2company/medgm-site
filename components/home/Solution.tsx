@@ -5,7 +5,7 @@ import { X, Check } from "lucide-react";
 
 export default function Solution() {
   return (
-    <section className="bg-[#0A0A0A] py-20 md:py-32 relative overflow-hidden">
+    <section className="bg-[#0A0A0A] py-12 md:py-20 lg:py-32 relative overflow-hidden px-4">
       {/* Separador visual superior */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
 
@@ -17,12 +17,12 @@ export default function Solution() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-3xl md:text-4xl font-display font-bold text-white mb-16 text-center"
+            className="text-2xl md:text-4xl font-display font-bold text-white mb-8 md:mb-16 text-center px-2"
           >
             Uma assessoria com um método específico para o seu mercado.
           </motion.h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-16">
             {/* Card: Não somos agência */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}

@@ -12,7 +12,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#0A0A0A] text-white min-h-screen flex flex-col justify-center pt-24 pb-12">
+    <section className="relative bg-[#0A0A0A] text-white min-h-screen flex flex-col justify-center pt-20 pb-8 px-4">
       {/* Glow radial dourado */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -23,21 +23,21 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center mb-10"
+            className="flex justify-center mb-8"
           >
-            <div className="relative">
+            <div className="relative px-4">
               {/* Linha superior */}
-              <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent mb-3"></div>
+              <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent mb-2"></div>
 
               {/* Tarja */}
-              <div className="px-6 py-2">
-                <p className="text-gold font-body font-semibold text-xs md:text-sm tracking-[0.2em] uppercase">
-                  EXCLUSIVO PARA CLÍNICAS QUE FATURAM ACIMA DE R$ 50 MIL POR MÊS
+              <div className="px-4 py-1.5">
+                <p className="text-gold font-body font-semibold text-[10px] md:text-sm tracking-[0.15em] uppercase leading-tight">
+                  EXCLUSIVO PARA CLÍNICAS QUE FATURAM ACIMA DE R$ 50 MIL/MÊS
                 </p>
               </div>
 
               {/* Linha inferior */}
-              <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent mt-3"></div>
+              <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent mt-2"></div>
             </div>
           </motion.div>
 
@@ -46,7 +46,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-display font-light text-white mb-6 leading-[1.1] tracking-tight"
+            className="text-3xl md:text-5xl lg:text-6xl font-display font-light text-white mb-4 md:mb-6 leading-[1.2] tracking-tight px-2"
           >
             Profissional da saúde não precisa aprender marketing.{" "}
             <span className="text-white">
@@ -59,7 +59,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-[#888] mb-12 font-body font-light leading-relaxed max-w-3xl mx-auto"
+            className="text-base md:text-xl text-[#888] mb-8 md:mb-12 font-body font-light leading-relaxed max-w-3xl mx-auto px-2"
           >
             Assessoria de growth exclusiva para clínicas médicas. Desde 2021 estruturando o crescimento de mais de 250 projetos na área da saúde.
           </motion.p>
@@ -69,23 +69,23 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+            className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-12 md:mb-16 px-2"
           >
             <motion.a
               href="#form"
-              className="bg-transparent border-2 border-gold text-gold font-body font-semibold text-base px-10 py-4 rounded-full hover:bg-gold/10 transition-all duration-300 inline-flex items-center gap-3"
+              className="w-full sm:w-auto bg-transparent border-2 border-gold text-gold font-body font-semibold text-sm md:text-base px-6 md:px-10 py-3 md:py-4 rounded-full hover:bg-gold/10 transition-all duration-300 inline-flex items-center justify-center gap-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
               Quero saber mais
-              <ArrowRight size={20} />
+              <ArrowRight size={18} />
             </motion.a>
 
             <motion.a
               href="https://wa.me/5521965116943?text=Olá!%20Quero%20agendar%20diagnóstico%20gratuito"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gold text-dark font-body font-bold text-base px-10 py-4 rounded-full hover:bg-gold-light transition-all duration-300 inline-flex items-center gap-3 shadow-gold-glow"
+              className="w-full sm:w-auto bg-gold text-dark font-body font-bold text-sm md:text-base px-6 md:px-10 py-3 md:py-4 rounded-full hover:bg-gold-light transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-gold-glow"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -98,9 +98,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="pt-12 border-t border-gold/10"
+            className="pt-8 md:pt-12 border-t border-gold/10"
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -109,11 +109,11 @@ export default function Hero() {
                   transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
                   className="text-center group"
                 >
-                  <p className="text-3xl md:text-4xl font-display font-bold text-gold mb-2 group-hover:text-gold-light transition-colors">
+                  <p className="text-2xl md:text-4xl font-display font-bold text-gold mb-1.5 md:mb-2 group-hover:text-gold-light transition-colors">
                     {stat.number}
                   </p>
-                  <div className="h-px w-8 bg-gold/30 mx-auto mb-2"></div>
-                  <p className="text-xs md:text-sm font-body uppercase tracking-[0.15em] text-gray-400">
+                  <div className="h-px w-6 md:w-8 bg-gold/30 mx-auto mb-1.5 md:mb-2"></div>
+                  <p className="text-[10px] md:text-sm font-body uppercase tracking-[0.1em] md:tracking-[0.15em] text-gray-400 leading-tight px-1">
                     {stat.label}
                   </p>
                 </motion.div>
