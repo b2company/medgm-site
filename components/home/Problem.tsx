@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { AlertCircle } from "lucide-react";
 
 const pains = [
   "Concorrência crescente no digital.",
@@ -13,60 +14,88 @@ const pains = [
 
 export default function Problem() {
   return (
-    <section className="bg-dark py-20 md:py-32">
-      <div className="container-custom">
-        <div className="max-w-[680px] mx-auto text-center">
+    <section className="bg-dark py-20 md:py-32 relative overflow-hidden">
+      {/* Gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-dark to-[#0A0A0A] pointer-events-none"></div>
+
+      <div className="container-custom relative z-10">
+        <div className="max-w-6xl mx-auto">
           {/* Título */}
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-12"
+            className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-16 text-center"
           >
             Se isso soa familiar, você não está sozinho.
           </motion.h2>
 
-          {/* Lista de dores */}
-          <div className="space-y-4 mb-12">
+          {/* Grid de dores */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {pains.map((pain, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                style={{
-                  opacity: 0.5 + (index * 0.1), // Gradiente de opacidade
-                }}
-                className="text-lg md:text-xl font-body text-gray-300 leading-relaxed"
+                className="group"
               >
-                {pain}
+                <div className="bg-[#111] border border-white/10 rounded-2xl p-6 h-full hover:border-gold/30 transition-all duration-300 hover:shadow-lg hover:shadow-gold/10">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <AlertCircle className="text-gold/60 group-hover:text-gold transition-colors" size={24} />
+                    </div>
+                    <p className="text-base md:text-lg font-body text-gray-300 leading-relaxed group-hover:text-white transition-colors">
+                      {pain}
+                    </p>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Frase de transição */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
+          {/* Card de estatística 83% */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="bg-gradient-to-br from-[#111] to-[#0A0A0A] border-2 border-gold/40 rounded-3xl p-8 md:p-12 mb-12 relative overflow-hidden"
+          >
+            {/* Glow effect */}
+            <div className="absolute -top-20 -right-20 w-40 h-40 bg-gold/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div className="relative z-10 text-center max-w-4xl mx-auto">
+              <div className="mb-6">
+                <span className="text-6xl md:text-7xl lg:text-8xl font-display font-bold text-gold">
+                  83%
+                </span>
+              </div>
+              <p className="text-xl md:text-2xl font-body text-white leading-relaxed">
+                dos profissionais de saúde relatam sintomas de <span className="text-gold font-semibold">burnout</span>.
+              </p>
+              <p className="text-lg md:text-xl font-body text-gray-400 mt-4 leading-relaxed">
+                A conta do marketing que não funciona não é só financeira. É física e mental.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Frase de virada */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-lg md:text-xl font-body text-gray-400 mb-8 leading-relaxed"
+            className="text-center"
           >
-            83% dos profissionais de saúde relatam sintomas de burnout. A conta do marketing que não funciona não é só financeira. É física e mental.
-          </motion.p>
-
-          {/* Frase de virada */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="text-2xl md:text-3xl font-display font-semibold text-[#FFEBC3] leading-tight"
-          >
-            O problema não é você. O problema é estratégia genérica aplicada a um mercado específico.
-          </motion.p>
+            <div className="inline-block bg-gradient-to-r from-gold/10 to-gold-light/10 border border-gold/30 rounded-2xl px-8 md:px-12 py-6 md:py-8">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-display font-semibold text-gold-light leading-tight">
+                O problema não é você. O problema é estratégia genérica aplicada a um mercado específico.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
