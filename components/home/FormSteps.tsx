@@ -50,7 +50,7 @@ Faturamento mensal: ${formData.faturamento}
 Cidade: ${formData.cidade}`;
 
     window.open(
-      `https://wa.me/5521999999999?text=${encodeURIComponent(message)}`,
+      `https://wa.me/5521965116943?text=${encodeURIComponent(message)}`,
       "_blank"
     );
   };
@@ -157,7 +157,7 @@ Cidade: ${formData.cidade}`;
                     setFormData({ ...formData, telefone: e.target.value })
                   }
                   className="w-full bg-dark-deeper border border-gold/30 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
-                  placeholder="(21) 99999-9999"
+                  placeholder="+55 21 96511-6943"
                 />
               </div>
 

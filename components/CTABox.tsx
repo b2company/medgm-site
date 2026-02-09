@@ -15,7 +15,7 @@ export default function CTABox({
   title,
   description,
   buttonText,
-  buttonHref = "https://wa.me/5521999999999?text=Olá! Quero saber mais sobre os serviços da MedGM",
+  buttonHref = "https://wa.me/5521965116943?text=Olá! Quero saber mais sobre os serviços da MedGM",
   dark = false,
 }: CTABoxProps) {
   return (

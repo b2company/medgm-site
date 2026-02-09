@@ -167,7 +167,7 @@ Mensagem: ${formData.mensagem}`;
                       value={formData.whatsapp}
                       onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
                       className="w-full bg-dark border border-white/10 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
-                      placeholder="(21) 99999-9999"
+                      placeholder="+55 21 96511-6943"
                     />
                   </div>
                 </div>

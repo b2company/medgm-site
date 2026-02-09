@@ -63,7 +63,7 @@ export default function Header() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <a
-              href="https://wa.me/5521999999999?text=Olá! Quero agendar meu diagnóstico gratuito"
+              href="https://wa.me/5521965116943?text=Olá! Quero agendar meu diagnóstico gratuito"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-sm"
@@ -104,7 +104,7 @@ export default function Header() {
                 </Link>
               ))}
               <a
-                href="https://wa.me/5521999999999?text=Olá! Quero agendar meu diagnóstico gratuito"
+                href="https://wa.me/5521965116943?text=Olá! Quero agendar meu diagnóstico gratuito"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary justify-center"

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function WhatsAppButton() {
   return (
     <motion.a
-      href="https://wa.me/5521999999999?text=Olá! Quero conhecer os serviços da MedGM"
+      href="https://wa.me/5521965116943?text=Olá! Quero conhecer os serviços da MedGM"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform"
