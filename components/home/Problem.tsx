@@ -1,95 +1,73 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  PhoneOff,
-  CircleDollarSign,
-  UserX,
-  Shuffle,
-  EyeOff,
-  ThumbsDown,
-} from "lucide-react";
-import SectionTitle from "@/components/SectionTitle";
+
+const pains = [
+  "Concorrência crescente no digital.",
+  "Profissionais menos qualificados que vendem mais do que você.",
+  "Dificuldade de construir audiência.",
+  "Já passou por agências e nunca teve resultado expressivo.",
+  "Muita energia e pouco resultado.",
+  "A sensação de que \"quando faço sozinho, tenho mais resultados.\"",
+];
 
 export default function Problem() {
-  const painPoints = [
-    {
-      icon: PhoneOff,
-      text: "Lead pede orçamento às 22h. Sua secretária responde às 9h. Ele já fechou com o concorrente que tem chatbot.",
-    },
-    {
-      icon: CircleDollarSign,
-      text: "R$ 8 mil/mês em Meta Ads. Você não sabe quantos viraram pacientes. Nem quanto cada um custou. Nem se vale a pena.",
-    },
-    {
-      icon: UserX,
-      text: "Paciente faz 1 consulta e some. 6 meses depois aparece no Google pedindo indicação de 'outro médico da área'.",
-    },
-    {
-      icon: Shuffle,
-      text: "Segunda-feira = 12 consultas. Quinta = 3. Você vive na montanha-russa porque depende de quem lembra de te indicar.",
-    },
-    {
-      icon: EyeOff,
-      text: "Você é referência na sua especialidade. Mas o Dr. Fulano (que é mediano) tem fila de espera. Por quê? Ele tem sistema.",
-    },
-    {
-      icon: ThumbsDown,
-      text: "Já contratou 3 agências. Todas prometeram 'resultado rápido'. Entregaram posts bonitos. Sua agenda continuou vazia.",
-    },
-  ];
-
   return (
-    <section className="section-padding bg-neutral">
+    <section className="bg-dark py-20 md:py-32">
       <div className="container-custom">
-        <SectionTitle
-          title="Por que médicos gastam R$ 15 mil/mês em tráfego e ainda têm agenda vazia?"
-          subtitle="Porque 90% das agências entregam likes, seguidores e 'engajamento'. Mas nenhuma delas estrutura o comercial que transforma lead em paciente fiel. É por isso que você vê resultado no Instagram, mas não no caixa."
-        />
+        <div className="max-w-[680px] mx-auto text-center">
+          {/* Título */}
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-12"
+          >
+            Se isso soa familiar, você não está sozinho.
+          </motion.h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          {painPoints.map((point, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
-              whileHover={{ y: -8, transition: { duration: 0.4 } }}
-              className="card group"
-            >
+          {/* Lista de dores */}
+          <div className="space-y-4 mb-12">
+            {pains.map((pain, index) => (
               <motion.div
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                transition={{ duration: 0.3 }}
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                style={{
+                  opacity: 0.5 + (index * 0.1), // Gradiente de opacidade
+                }}
+                className="text-lg md:text-xl font-body text-gray-300 leading-relaxed"
               >
-                <point.icon
-                  className="text-gold mb-4 transition-colors duration-500 group-hover:text-gold-light"
-                  size={40}
-                />
+                {pain}
               </motion.div>
-              <p className="text-gray-700 leading-relaxed">{point.text}</p>
-            </motion.div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-12 text-center max-w-3xl mx-auto"
-        >
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            <strong className="text-dark">Reconheceu sua clínica em algum desses cenários?</strong>
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            O problema não é você. É que 90% das agências vendem <em>&ldquo;solução de marketing&rdquo;</em> quando
-            o que você precisa é de <strong className="text-gold">estrutura comercial completa</strong>.
-            Elas entregam visualizações. Nós entregamos pacientes. Elas vendem posts. Nós implementamos
-            o sistema que transforma lead em consulta, consulta em fidelização, e fidelização em receita
-            previsível. <strong className="text-gold">É exatamente isso que separa clínicas que sobrevivem
-            das que prosperam.</strong>
-          </p>
-        </motion.div>
+          {/* Frase de transição */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="text-lg md:text-xl font-body text-gray-400 mb-8 leading-relaxed"
+          >
+            83% dos profissionais de saúde relatam sintomas de burnout. A conta do marketing que não funciona não é só financeira. É física e mental.
+          </motion.p>
+
+          {/* Frase de virada */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 1 }}
+            className="text-2xl md:text-3xl font-display font-semibold text-[#FFEBC3] leading-tight"
+          >
+            O problema não é você. O problema é estratégia genérica aplicada a um mercado específico.
+          </motion.p>
+        </div>
       </div>
     </section>
   );
