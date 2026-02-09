@@ -1,28 +1,23 @@
 import Hero from "@/components/home/Hero";
-import ProofBar from "@/components/home/ProofBar";
-import Problem from "@/components/home/Problem";
-import Method from "@/components/home/Method";
+import FormSteps from "@/components/home/FormSteps";
+import ScientificMethod from "@/components/home/ScientificMethod";
 import Services from "@/components/home/Services";
+import Personalization from "@/components/home/Personalization";
+import Credentials from "@/components/home/Credentials";
 import Cases from "@/components/home/Cases";
 import BlogPreview from "@/components/home/BlogPreview";
 import FAQ from "@/components/home/FAQ";
 import FinalCTA from "@/components/home/FinalCTA";
-import Stats from "@/components/home/Stats";
-import DecorativeLine from "@/components/DecorativeLine";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <ProofBar />
-      <DecorativeLine />
-      <Stats />
-      <DecorativeLine />
-      <Problem />
-      <Method />
-      <DecorativeLine />
+      <FormSteps />
+      <ScientificMethod />
       <Services />
-      <DecorativeLine />
+      <Personalization />
+      <Credentials />
       <Cases />
       <BlogPreview />
       <FAQ />

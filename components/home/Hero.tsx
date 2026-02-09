@@ -1,93 +1,94 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
-  const scrollToContent = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth",
-    });
-  };
-
   return (
-    <section className="relative bg-gradient-to-br from-dark-deep via-dark to-dark-deeper text-white min-h-screen flex items-center pt-20 shadow-dark-inset">
-      {/* Overlay escuro */}
-      <div className="absolute inset-0 bg-black/30 z-0"></div>
+    <section className="relative bg-black text-white min-h-[90vh] flex items-center pt-24 pb-16">
+      <div className="container-custom relative z-10">
+        <div className="max-w-6xl mx-auto">
+          {/* Qualificação no topo */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <p className="text-white font-montserrat font-medium text-lg tracking-wider uppercase">
+              EXCLUSIVO PARA CLÍNICAS QUE FATURAM ACIMA DE R$ 100 MIL AO MÊS.
+            </p>
+          </motion.div>
 
-      <div className="container-custom py-20 md:py-32 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+          {/* Título principal */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif mb-8 leading-tight"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold text-center mb-6 leading-[1.1]"
           >
-            Sua agenda vazia não é falta de pacientes.{" "}
+            Tenha um time{" "}
             <span className="text-gold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
-              É falta de sistema comercial.
-            </span>
+              feito sob medida
+            </span>{" "}
+            para sua clínica
           </motion.h1>
 
+          {/* Subtítulo */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed font-light max-w-3xl mx-auto"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-2xl text-gray-300 mb-12 text-center font-montserrat font-normal max-w-4xl mx-auto"
           >
-            Enquanto você depende de indicações e reza para o telefone tocar, médicos
-            com o Método MedGM preenchem 37 consultas por semana de forma previsível.
-            Não com sorte. Com estrutura comercial + marketing que converte.
+            Assessoria completa de marketing e vendas para clínicas médicas que querem crescer de forma previsível
           </motion.p>
 
+          {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
           >
             <motion.a
-              href="https://wa.me/5521999999999?text=Olá! Quero agendar meu diagnóstico gratuito"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary text-lg px-10 py-5 font-black uppercase tracking-wide"
+              href="#form"
+              className="bg-gold text-black font-montserrat font-bold text-lg uppercase px-12 py-5 rounded-full hover:bg-gold-light transition-all duration-300 inline-flex items-center gap-3 shadow-gold-glow"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
-              Quero Meu Diagnóstico Gratuito
+              Quero mais informações
               <ArrowRight size={20} />
             </motion.a>
 
-            <motion.button
-              onClick={scrollToContent}
-              className="btn-secondary text-lg px-10 py-5 font-bold"
+            <motion.a
+              href="https://wa.me/5521999999999?text=Olá!%20Já%20quero%20contratar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent border-2 border-gold text-gold font-montserrat font-bold text-lg uppercase px-12 py-5 rounded-full hover:bg-gold hover:text-black transition-all duration-300 inline-flex items-center gap-3"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
-              Veja Como Funciona
-              <ArrowDown size={20} />
-            </motion.button>
+              Já tomei essa decisão
+            </motion.a>
+          </motion.div>
+
+          {/* Social Proof */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="text-center"
+          >
+            <p className="text-gold font-display text-6xl md:text-7xl font-bold mb-2">
+              R$ 47,3 Milhões
+            </p>
+            <p className="text-gray-400 font-montserrat text-xl uppercase tracking-wide">
+              Receita gerada para nossos clientes médicos
+            </p>
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="drop-shadow-[0_0_10px_rgba(202,170,130,0.5)]"
-        >
-          <ArrowDown className="text-gold" size={32} />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }
