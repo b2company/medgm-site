@@ -1,233 +1,248 @@
-import type { Metadata } from "next";
-import SectionTitle from "@/components/SectionTitle";
-import { Check } from "lucide-react";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Serviços de Marketing Médico",
-  description:
-    "Conheça os planos da MedGM: Start, Select e Exclusive. Soluções completas de marketing médico e gestão comercial para cada fase da sua clínica.",
-};
+import { motion } from "framer-motion";
+import { TrendingUp, Megaphone, FileText, BarChart3, Users } from "lucide-react";
+
+const services = [
+  {
+    icon: TrendingUp,
+    title: "Gestão de Anúncios",
+    description:
+      "Tráfego pago no Google e Meta para atrair pacientes qualificados ao seu funil de agendamentos. Previsibilidade e retorno mensurável.",
+  },
+  {
+    icon: Megaphone,
+    title: "Criativos & Copywriting",
+    description:
+      "Anúncios e materiais criados por especialistas em marketing médico. Foco em conversão, com base na experiência de mais de 250 projetos.",
+  },
+  {
+    icon: FileText,
+    title: "Landing Pages",
+    description:
+      "Páginas projetadas para converter visitantes em agendamentos. Compliance total com o CFM. Fáceis de implementar e editar.",
+  },
+  {
+    icon: BarChart3,
+    title: "Business Intelligence",
+    description:
+      "Dashboards com os indicadores que importam: custo por lead, agendamentos, taxa de conversão, receita. Acessíveis a qualquer momento.",
+  },
+  {
+    icon: Users,
+    title: "Estruturação Comercial",
+    description:
+      "Treinamento de secretárias, scripts de conversão para WhatsApp e processos de agendamento. Estruturamos o comercial da sua clínica para que o growth se converta em consultas.",
+  },
+];
+
+const timeline = [
+  {
+    week: "01",
+    title: "Diagnóstico do consultório",
+    description:
+      "Análise profunda dos seus serviços e pacientes. Mapeamos o que você vende, o que deveria vender, o que tem margem, o que trava, quem é o cliente certo e qual caminho gera o maior retorno no menor tempo.",
+  },
+  {
+    week: "02",
+    title: "Diagnóstico do marketing",
+    description:
+      "Auditoria completa do seu Instagram, criação de pilares de conteúdo, roteiros para reels específicos para sua especialidade e direcionamento para construir um perfil que atrai e converte.",
+  },
+  {
+    week: "03",
+    title: "Diagnóstico comercial",
+    description:
+      "Metodologia para aumentar em 30% os seus agendamentos. Estrutura de CRM com scripts validados, prontos para sua secretária replicar.",
+  },
+  {
+    week: "04",
+    title: "Guia de comunicação",
+    description:
+      "Setup de identidade visual, landing page personalizada, criativos de alta conversão e perfil estratégico no Instagram.",
+  },
+  {
+    week: "05",
+    title: "Growth Planning",
+    description:
+      "Planejamento de crescimento com planilhas de controle diário de contatos, controle de pacientes agendados e calendário de conteúdo.",
+  },
+];
 
 export default function Servicos() {
-  const plans = [
-    {
-      id: "start",
-      name: "START",
-      subtitle: "Para médicos começando no digital",
-      description:
-        "Presença digital estruturada com gestão de redes sociais, tráfego pago e conteúdo estratégico.",
-      features: [
-        "Gestão de redes sociais (Instagram e Facebook)",
-        "Criação de 12 posts mensais",
-        "Tráfego pago básico (Google Ads e Meta Ads)",
-        "Google Meu Negócio otimizado",
-        "Relatório mensal de métricas",
-        "1 reunião estratégica mensal",
-      ],
-      forWho: "Médicos com faturamento até R$ 30k/mês que precisam estabelecer presença digital",
-    },
-    {
-      id: "select",
-      name: "SELECT",
-      subtitle: "Para clínicas estruturando o comercial",
-      description:
-        "Tudo do Start + estruturação comercial completa com treinamento de equipe e CRM.",
-      popular: true,
-      features: [
-        "Tudo do plano Start",
-        "Consultoria de posicionamento estratégico",
-        "Implementação completa de CRM",
-        "Scripts de agendamento e conversão",
-        "Hotseat mensal para secretárias",
-        "Dashboard de métricas (CAC, LTV, ROI)",
-        "Fluxos de follow-up automatizados",
-        "Pesquisa de satisfação (NPS)",
-        "2 reuniões estratégicas mensais",
-      ],
-      forWho: "Clínicas com R$ 50k+ de faturamento que querem estrutura comercial e previsibilidade",
-    },
-    {
-      id: "exclusive",
-      name: "EXCLUSIVE",
-      subtitle: "Para clínicas que querem dominar o mercado",
-      description:
-        "Tudo do Select + automação avançada, IA e consultoria estratégica dedicada.",
-      features: [
-        "Tudo do plano Select",
-        "CRM dedicado e personalizado",
-        "Secretária em IA para atendimento 24/7",
-        "Treinamento individual gravado",
-        "Trilhas de conteúdo exclusivas",
-        "Consultoria estratégica semanal com sócios",
-        "Análise de concorrência mensal",
-        "Programa de indicação estruturado",
-        "Campanhas de reativação de pacientes",
-        "Suporte prioritário via WhatsApp",
-      ],
-      forWho: "Clínicas premium que querem dominar o mercado da sua região e especialidade",
-    },
-  ];
-
   return (
-    <>
+    <main className="bg-dark min-h-screen">
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-dark-deep via-dark to-dark-deeper text-white pt-32 pb-20 shadow-dark-inset">
-        <div className="absolute inset-0 bg-black/30 z-0"></div>
-        <div className="container-custom relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display mb-8 leading-tight">
-              Soluções completas para cada fase da{" "}
-              <span className="text-gold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">sua clínica</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 font-light">
-              Do início da jornada digital até a dominância de mercado. Escolha o
-              plano ideal para o seu momento.
-            </p>
+      <section className="pt-32 pb-20 md:py-32 bg-[#0A0A0A]">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight"
+            >
+              Assessoria de growth para clínicas médicas.
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl md:text-2xl font-body font-light text-gray-300"
+            >
+              Projetamos o crescimento da sua clínica conforme a necessidade dela. Você pode personalizar o escopo que mais se adeque ao seu momento.
+            </motion.p>
           </div>
         </div>
       </section>
 
-      {/* Planos Detalhados */}
-      <section className="section-padding bg-white">
-        <div className="container-custom max-w-6xl">
-          <div className="space-y-16">
-            {plans.map((plan, index) => (
-              <div
-                key={plan.id}
-                id={plan.id}
-                className={`relative ${
-                  plan.popular ? "border-2 border-gold rounded-2xl p-8 bg-neutral" : ""
-                }`}
+      {/* O que fazemos */}
+      <section className="py-20 md:py-32">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-6 max-w-4xl mx-auto"
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4 leading-tight">
+              Soluções de growth feitas sob medida para sua clínica
+            </h2>
+            <p className="text-lg md:text-xl font-body text-gray-400">
+              Tenha um braço a mais para ajudar seu time ou terceirize todo o seu marketing com a MedGM. Sem preocupação com contratação, gestão de equipe ou burocracias.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group"
               >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-8">
-                    <span className="bg-gold text-dark px-4 py-1 rounded-full text-sm font-bold">
-                      Mais Popular
-                    </span>
+                <div className="bg-[#111] border border-white/10 rounded-2xl p-8 hover:border-gold/40 transition-all duration-500 h-full">
+                  <div className="bg-gold/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gold/20 group-hover:scale-110 transition-all duration-300">
+                    <service.icon className="text-gold" size={32} />
                   </div>
-                )}
-
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h2 className="text-3xl font-heading font-bold text-gold mb-2">
-                      {plan.name}
-                    </h2>
-                    <p className="text-xl font-heading font-semibold mb-4">{plan.subtitle}</p>
-                    <p className="text-gray-700 mb-6 leading-relaxed">
-                      {plan.description}
-                    </p>
-                    <div className="bg-white rounded-lg p-6 border-2 border-gold">
-                      <p className="text-sm font-bold text-gold mb-2">IDEAL PARA:</p>
-                      <p className="text-gray-700">{plan.forWho}</p>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="font-bold text-lg mb-4">O que está incluído:</h3>
-                    <ul className="space-y-3 mb-8">
-                      {plan.features.map((feature, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <Check className="text-gold flex-shrink-0 mt-1" size={20} />
-                          <span className="text-gray-700">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <a
-                      href={`https://wa.me/5521999999999?text=Olá! Quero saber mais sobre o plano ${plan.name}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-primary w-full justify-center"
-                    >
-                      Quero Este Plano
-                    </a>
-                  </div>
+                  <h3 className="text-xl font-display font-bold text-white mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-base font-body text-gray-400 leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Comparação */}
-      <section className="section-padding bg-neutral">
+      {/* Como funciona - Timeline */}
+      <section className="bg-[#0A0A0A] py-20 md:py-32">
         <div className="container-custom">
-          <SectionTitle title="Comparação de Planos" />
-          <div className="overflow-x-auto mt-12">
-            <table className="w-full bg-white rounded-lg shadow-lg">
-              <thead className="bg-dark text-white">
-                <tr>
-                  <th className="p-4 text-left">Recurso</th>
-                  <th className="p-4 text-center">START</th>
-                  <th className="p-4 text-center bg-gold text-dark">SELECT</th>
-                  <th className="p-4 text-center">EXCLUSIVE</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y">
-                <tr>
-                  <td className="p-4">Gestão de Redes Sociais</td>
-                  <td className="p-4 text-center"><Check className="mx-auto text-gold" size={20} /></td>
-                  <td className="p-4 text-center bg-cream"><Check className="mx-auto text-gold" size={20} /></td>
-                  <td className="p-4 text-center"><Check className="mx-auto text-gold" size={20} /></td>
-                </tr>
-                <tr>
-                  <td className="p-4">Tráfego Pago</td>
-                  <td className="p-4 text-center"><Check className="mx-auto text-gold" size={20} /></td>
-                  <td className="p-4 text-center bg-cream"><Check className="mx-auto text-gold" size={20} /></td>
-                  <td className="p-4 text-center"><Check className="mx-auto text-gold" size={20} /></td>
-                </tr>
-                <tr>
-                  <td className="p-4">Estruturação Comercial</td>
-                  <td className="p-4 text-center">-</td>
-                  <td className="p-4 text-center bg-cream"><Check className="mx-auto text-gold" size={20} /></td>
-                  <td className="p-4 text-center"><Check className="mx-auto text-gold" size={20} /></td>
-                </tr>
-                <tr>
-                  <td className="p-4">CRM Implementado</td>
-                  <td className="p-4 text-center">-</td>
-                  <td className="p-4 text-center bg-cream"><Check className="mx-auto text-gold" size={20} /></td>
-                  <td className="p-4 text-center"><Check className="mx-auto text-gold" size={20} /></td>
-                </tr>
-                <tr>
-                  <td className="p-4">Secretária em IA</td>
-                  <td className="p-4 text-center">-</td>
-                  <td className="p-4 text-center bg-cream">-</td>
-                  <td className="p-4 text-center"><Check className="mx-auto text-gold" size={20} /></td>
-                </tr>
-                <tr>
-                  <td className="p-4">Consultoria Estratégica</td>
-                  <td className="p-4 text-center">Mensal</td>
-                  <td className="p-4 text-center bg-cream">2x/mês</td>
-                  <td className="p-4 text-center">Semanal</td>
-                </tr>
-              </tbody>
-            </table>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
+              Em 5 semanas, você recebe:
+            </h2>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto space-y-8">
+            {timeline.map((item, index) => (
+              <motion.div
+                key={item.week}
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex gap-6 group"
+              >
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-gold/10 border-2 border-gold rounded-full flex items-center justify-center group-hover:bg-gold/20 transition-all duration-300">
+                    <span className="text-2xl font-display font-bold text-gold">
+                      {item.week}
+                    </span>
+                  </div>
+                </div>
+                <div className="flex-1 pb-8">
+                  <h3 className="text-2xl font-display font-bold text-white mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-base font-body text-gray-400 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+
+            {/* Acompanhamento contínuo */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="bg-[#111] border border-gold/30 rounded-2xl p-8"
+            >
+              <h3 className="text-2xl font-display font-bold text-gold mb-4">
+                + Acompanhamento contínuo
+              </h3>
+              <p className="text-base font-body text-gray-300 leading-relaxed">
+                Suporte direto por 60 dias no WhatsApp para tirar dúvidas, revisar decisões e ajustar o plano conforme os resultados surgem.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-gradient-to-br from-dark-deep via-dark to-dark-deeper text-white">
-        <div className="container-custom max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6">
-            Não tem certeza qual{" "}
-            <span className="text-gold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">
-              plano escolher?
-            </span>
-          </h2>
-          <p className="text-lg text-gray-300 mb-8">
-            Agende um diagnóstico gratuito e vamos analisar juntos qual a melhor
-            solução para o seu momento.
-          </p>
-          <a
-            href="https://wa.me/5521999999999?text=Olá! Quero ajuda para escolher o plano ideal"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary text-lg"
-          >
-            Agendar Diagnóstico Gratuito
-          </a>
+      <section className="py-20 md:py-32">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6"
+            >
+              Não tem certeza por onde começar?
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl font-body text-gray-300 mb-8"
+            >
+              Agende um diagnóstico gratuito e vamos analisar juntos qual a melhor solução para o seu momento.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <a
+                href="https://wa.me/5521965116943?text=Olá!%20Quero%20agendar%20diagnóstico%20gratuito"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-gold text-dark font-body font-bold text-lg px-12 py-5 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
+              >
+                Agendar Diagnóstico Gratuito
+              </a>
+            </motion.div>
+          </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }

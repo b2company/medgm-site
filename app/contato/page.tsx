@@ -1,291 +1,233 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
-import type { Metadata } from "next";
-import SectionTitle from "@/components/SectionTitle";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 export default function Contato() {
   const [formData, setFormData] = useState({
-    name: "",
+    nome: "",
     email: "",
-    phone: "",
-    specialty: "",
-    message: "",
+    whatsapp: "",
+    especialidade: "",
+    mensagem: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    const message = `Olá! Vim pelo site MedGM.
 
-    // Aqui você pode integrar com seu backend ou serviço de email
-    // Por enquanto, vamos redirecionar para o WhatsApp
-    const whatsappMessage = `Olá! Meu nome é ${formData.name}. ${formData.message}`;
-    const whatsappUrl = `https://wa.me/5521999999999?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
+Nome: ${formData.nome}
+Email: ${formData.email}
+WhatsApp: ${formData.whatsapp}
+Especialidade: ${formData.especialidade}
 
-    window.open(whatsappUrl, "_blank");
-    setIsSubmitting(false);
+Mensagem: ${formData.mensagem}`;
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      specialty: "",
-      message: "",
-    });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/5521965116943?text=${encodedMessage}`, "_blank");
   };
 
   return (
-    <>
+    <main className="bg-dark min-h-screen">
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-dark-deep via-dark to-dark-deeper text-white pt-32 pb-20 shadow-dark-inset">
-        <div className="absolute inset-0 bg-black/30 z-0"></div>
-        <div className="container-custom relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display mb-8 leading-tight">
-              Vamos conversar sobre o{" "}
-              <span className="text-gold bg-gradient-to-r from-gold-dark via-gold to-gold-light bg-clip-text text-transparent">futuro da sua clínica?</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 font-light">
-              Entre em contato e descubra como podemos ajudar a construir a era de
-              ouro da medicina na sua prática.
-            </p>
+      <section className="pt-32 pb-20 md:py-32 bg-[#0A0A0A]">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight"
+            >
+              Vamos conversar sobre o futuro da sua clínica?
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl md:text-2xl font-body font-light text-gray-300"
+            >
+              Entre em contato e descubra como podemos acelerar o crescimento da sua prática médica.
+            </motion.p>
           </div>
         </div>
       </section>
 
-      {/* Contato */}
-      <section className="section-padding bg-white">
+      {/* Informações + Formulário */}
+      <section className="py-20">
         <div className="container-custom">
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
             {/* Informações de Contato */}
-            <div>
-              <h2 className="text-3xl font-heading font-bold mb-8">Fale Conosco</h2>
-
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start gap-4">
-                  <div className="bg-gold p-3 rounded-lg">
-                    <Phone className="text-dark" size={24} />
+            <div className="lg:col-span-1">
+              <div className="space-y-8">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  className="flex items-start gap-4"
+                >
+                  <div className="bg-gold/10 p-3 rounded-lg">
+                    <Phone className="text-gold" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-1">WhatsApp</h3>
-                    <a
-                      href="https://wa.me/5521999999999"
-                      className="text-gold hover:underline"
-                    >
-                      (21) 99999-9999
+                    <h3 className="text-lg font-body font-semibold text-white mb-1">WhatsApp</h3>
+                    <a href="https://wa.me/5521965116943" className="text-gray-300 hover:text-gold transition-colors">
+                      +55 21 96511-6943
                     </a>
-                    <p className="text-sm text-gray-600">
-                      Seg - Sex: 9h às 18h
-                    </p>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="flex items-start gap-4">
-                  <div className="bg-gold p-3 rounded-lg">
-                    <Mail className="text-dark" size={24} />
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="flex items-start gap-4"
+                >
+                  <div className="bg-gold/10 p-3 rounded-lg">
+                    <Mail className="text-gold" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-1">E-mail</h3>
-                    <a
-                      href="mailto:contato@medgm.com.br"
-                      className="text-gold hover:underline"
-                    >
+                    <h3 className="text-lg font-body font-semibold text-white mb-1">E-mail</h3>
+                    <a href="mailto:contato@medgm.com.br" className="text-gray-300 hover:text-gold transition-colors">
                       contato@medgm.com.br
                     </a>
-                    <p className="text-sm text-gray-600">
-                      Respondemos em até 24h
-                    </p>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="flex items-start gap-4">
-                  <div className="bg-gold p-3 rounded-lg">
-                    <MapPin className="text-dark" size={24} />
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="flex items-start gap-4"
+                >
+                  <div className="bg-gold/10 p-3 rounded-lg">
+                    <MapPin className="text-gold" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-1">Localização</h3>
-                    <p className="text-gray-700">
-                      Rio de Janeiro, RJ
-                      <br />
-                      <span className="text-sm text-gray-600">
-                        Atendimento 100% remoto
-                      </span>
-                    </p>
+                    <h3 className="text-lg font-body font-semibold text-white mb-1">Localização</h3>
+                    <p className="text-gray-300">Rio de Janeiro, RJ</p>
+                    <p className="text-sm text-gray-400 mt-1">Atendimento 100% remoto</p>
                   </div>
-                </div>
-              </div>
-
-              <div className="bg-neutral p-6 rounded-lg">
-                <h3 className="font-bold text-lg mb-3">Horário de Atendimento</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex justify-between">
-                    <span>Segunda a Sexta:</span>
-                    <span className="font-semibold">9h às 18h</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Sábado:</span>
-                    <span className="font-semibold">Fechado</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Domingo:</span>
-                    <span className="font-semibold">Fechado</span>
-                  </li>
-                </ul>
+                </motion.div>
               </div>
             </div>
 
             {/* Formulário */}
-            <div>
-              <h2 className="text-3xl font-heading font-bold mb-8">Envie uma Mensagem</h2>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-2"
+            >
+              <form onSubmit={handleSubmit} className="bg-[#111] border border-white/10 rounded-2xl p-8 space-y-6">
                 <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-bold mb-2"
-                  >
+                  <label htmlFor="nome" className="block text-white font-body font-semibold mb-2">
                     Nome Completo *
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
+                    id="nome"
                     required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gold focus:outline-none transition-colors"
+                    value={formData.nome}
+                    onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
+                    className="w-full bg-dark border border-white/10 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
                     placeholder="Dr. João Silva"
                   />
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-bold mb-2"
-                  >
-                    E-mail *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gold focus:outline-none transition-colors"
-                    placeholder="contato@clinica.com.br"
-                  />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="email" className="block text-white font-body font-semibold mb-2">
+                      E-mail *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full bg-dark border border-white/10 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
+                      placeholder="contato@clinica.com.br"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="whatsapp" className="block text-white font-body font-semibold mb-2">
+                      WhatsApp *
+                    </label>
+                    <input
+                      type="tel"
+                      id="whatsapp"
+                      required
+                      value={formData.whatsapp}
+                      onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
+                      className="w-full bg-dark border border-white/10 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
+                      placeholder="(21) 99999-9999"
+                    />
+                  </div>
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-bold mb-2"
-                  >
-                    WhatsApp *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    required
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gold focus:outline-none transition-colors"
-                    placeholder="(21) 99999-9999"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="specialty"
-                    className="block text-sm font-bold mb-2"
-                  >
-                    Especialidade
+                  <label htmlFor="especialidade" className="block text-white font-body font-semibold mb-2">
+                    Especialidade *
                   </label>
                   <select
-                    id="specialty"
-                    name="specialty"
-                    value={formData.specialty}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gold focus:outline-none transition-colors"
+                    id="especialidade"
+                    required
+                    value={formData.especialidade}
+                    onChange={(e) => setFormData({ ...formData, especialidade: e.target.value })}
+                    className="w-full bg-dark border border-white/10 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all"
                   >
                     <option value="">Selecione...</option>
-                    <option value="dermatologia">Dermatologia</option>
-                    <option value="ortopedia">Ortopedia</option>
-                    <option value="cardiologia">Cardiologia</option>
-                    <option value="cirurgia-plastica">Cirurgia Plástica</option>
-                    <option value="clinico-geral">Clínico Geral</option>
-                    <option value="pediatria">Pediatria</option>
-                    <option value="ginecologia">Ginecologia</option>
-                    <option value="outra">Outra</option>
+                    <option value="Dermatologia">Dermatologia</option>
+                    <option value="Ortopedia">Ortopedia</option>
+                    <option value="Cardiologia">Cardiologia</option>
+                    <option value="Cirurgia Plástica">Cirurgia Plástica</option>
+                    <option value="Clínico Geral">Clínico Geral</option>
+                    <option value="Pediatria">Pediatria</option>
+                    <option value="Ginecologia">Ginecologia</option>
+                    <option value="Outra">Outra</option>
                   </select>
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-bold mb-2"
-                  >
+                  <label htmlFor="mensagem" className="block text-white font-body font-semibold mb-2">
                     Mensagem *
                   </label>
                   <textarea
-                    id="message"
-                    name="message"
+                    id="mensagem"
                     required
-                    value={formData.message}
-                    onChange={handleChange}
                     rows={5}
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-gold focus:outline-none transition-colors resize-none"
-                    placeholder="Conte-nos sobre sua clínica e como podemos ajudar..."
+                    value={formData.mensagem}
+                    onChange={(e) => setFormData({ ...formData, mensagem: e.target.value })}
+                    className="w-full bg-dark border border-white/10 rounded-xl px-6 py-4 text-white font-body focus:outline-none focus:border-gold transition-all resize-none"
+                    placeholder="Conte-nos sobre sua clínica..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="btn-primary w-full justify-center text-lg"
+                  className="w-full bg-gold text-dark font-body font-bold text-lg uppercase px-12 py-5 rounded-full hover:bg-gold-light transition-all duration-300 shadow-gold-glow"
                 >
-                  {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
-                  <Send size={20} />
+                  Enviar Mensagem
                 </button>
 
-                <p className="text-sm text-gray-600 text-center">
-                  Ao enviar, você concorda em receber contato da MedGM via e-mail
-                  e WhatsApp.
+                <p className="text-sm text-gray-400 text-center">
+                  Ao enviar, você concorda em receber contato da MedGM via e-mail e WhatsApp.
+                </p>
+                <p className="text-sm text-gray-400 text-center">
+                  Atendemos todo o Brasil com consultoria 100% remota via reuniões online.
                 </p>
               </form>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
-
-      {/* Mapa (opcional) */}
-      <section className="bg-neutral py-12">
-        <div className="container-custom text-center">
-          <p className="text-gray-700 text-lg">
-            <strong className="text-gold">Atendemos todo o Brasil</strong> com
-            consultoria 100% remota via reuniões online.
-          </p>
-        </div>
-      </section>
-    </>
+    </main>
   );
 }
