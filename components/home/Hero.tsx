@@ -26,9 +26,9 @@ export default function Hero() {
         </motion.div>
 
         {/* Grid de duas colunas */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr,1.2fr] gap-12 items-center max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Coluna esquerda - Conteúdo */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
             {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -87,17 +87,17 @@ export default function Hero() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative flex justify-center lg:justify-end order-first lg:order-last"
+            className="relative flex justify-center lg:justify-end order-first lg:order-last h-[400px] lg:h-[700px]"
           >
-            <div className="relative w-full h-[500px] lg:h-[600px]">
+            <div className="relative w-full h-full max-w-3xl">
               <Image
                 src="/fundadores.png"
                 alt="Fundadores da MedGM"
                 fill
                 priority
                 quality={100}
-                className="object-contain object-center lg:object-right"
-                sizes="(max-width: 1024px) 100vw, 60vw"
+                className="object-contain object-bottom lg:object-center-right"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </motion.div>
