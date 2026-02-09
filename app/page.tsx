@@ -1,25 +1,27 @@
 import Hero from "@/components/home/Hero";
-import FormSteps from "@/components/home/FormSteps";
+import Stats from "@/components/home/Stats";
+import Problem from "@/components/home/Problem";
+import Solution from "@/components/home/Solution";
 import ScientificMethod from "@/components/home/ScientificMethod";
 import Services from "@/components/home/Services";
-import Personalization from "@/components/home/Personalization";
+import Testimonials from "@/components/home/Testimonials";
 import Credentials from "@/components/home/Credentials";
-import Cases from "@/components/home/Cases";
-import BlogPreview from "@/components/home/BlogPreview";
 import FAQ from "@/components/home/FAQ";
 import FinalCTA from "@/components/home/FinalCTA";
+import FormSteps from "@/components/home/FormSteps";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <FormSteps />
+      <Stats />
+      <Problem />
+      <Solution />
       <ScientificMethod />
       <Services />
-      <Personalization />
+      <Testimonials />
       <Credentials />
-      <Cases />
-      <BlogPreview />
+      <FormSteps />
       <FAQ />
       <FinalCTA />
     </>
