@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative text-white min-h-screen overflow-hidden">
+      <section className="relative text-white min-h-[1100px] lg:min-h-screen overflow-hidden">
         {/* Background Desktop */}
         <div className="absolute inset-0 hidden lg:block">
           <Image
@@ -30,7 +30,7 @@ export default function Hero() {
             priority
             quality={100}
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-bottom object-right"
           />
         </div>
 
@@ -38,7 +38,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/20"></div>
 
         {/* Conteúdo */}
-        <div className="relative z-10 min-h-screen flex flex-col justify-center md:justify-start pt-32 md:pt-32 lg:pt-36 pb-20 px-4">
+        <div className="relative z-10 min-h-[1100px] lg:min-h-screen flex flex-col justify-start pt-24 md:pt-32 lg:pt-36 pb-20 px-4">
           <div className="w-full max-w-7xl mx-auto">
             {/* Tarja NO TOPO - Centralizada */}
             <motion.div
