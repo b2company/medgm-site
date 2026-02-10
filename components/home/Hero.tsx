@@ -65,22 +65,13 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-light text-white mb-4 md:mb-5 leading-[1.15]"
+                className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-light text-white mb-6 md:mb-8 leading-[1.15]"
               >
                 Profissional da saúde não precisa aprender marketing.{" "}
                 <span className="font-normal">
                   Precisa de quem faça por ele.
                 </span>
               </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-base md:text-lg text-gray-200 mb-6 md:mb-8 font-body leading-relaxed"
-              >
-                Assessoria de growth exclusiva para clínicas médicas. Desde 2021 estruturando o crescimento de mais de 250 projetos na área da saúde.
-              </motion.p>
 
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
