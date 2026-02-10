@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <>
       {/* Hero Section - Primeira Dobra */}
-      <section className="relative bg-[#0A0A0A] text-white min-h-screen flex flex-col justify-center pt-20 pb-0 px-4 overflow-hidden">
+      <section className="relative bg-[#0A0A0A] text-white min-h-screen flex flex-col justify-center pt-32 md:pt-40 pb-0 px-4 overflow-hidden">
         {/* Glow radial dourado */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] max-w-[200vw] bg-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -18,7 +18,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center mb-6 md:mb-8"
+            className="flex justify-center mb-8 md:mb-10"
           >
             <div className="relative px-2">
               {/* Linha superior */}
@@ -37,7 +37,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Grid: 40% texto (esquerda) + 60% imagem (direita) */}
-          <div className="grid lg:grid-cols-[40%_60%] gap-8 items-center max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-[40%_60%] gap-4 lg:gap-6 items-center max-w-7xl mx-auto">
 
             {/* Coluna Esquerda - Conteúdo (40% - ALINHADO À ESQUERDA) */}
             <div className="text-center lg:text-left">
