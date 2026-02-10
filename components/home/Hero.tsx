@@ -56,7 +56,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Conteúdo de Texto */}
-          <div className="max-w-full lg:max-w-2xl mx-auto lg:mx-0 lg:mr-auto">
+          <div className="max-w-full mx-auto lg:mx-0 lg:max-w-xl">
             <div className="text-center lg:text-left">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
