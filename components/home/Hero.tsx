@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import WhatsAppLink from "@/components/WhatsAppLink";
 
 const stats = [
   { number: "+250", label: "Projetos na área da saúde" },
@@ -82,17 +81,14 @@ export default function Hero() {
               <ArrowRight size={18} />
             </motion.a>
 
-            <motion.div
+            <motion.a
+              href="/contato"
+              className="w-full sm:w-auto bg-gold text-dark font-body font-bold text-sm md:text-base px-6 md:px-10 py-3 md:py-4 rounded-full hover:bg-gold-light transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-gold-glow"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
-              <WhatsAppLink
-                message="Olá! Quero agendar diagnóstico gratuito"
-                className="w-full sm:w-auto bg-gold text-dark font-body font-bold text-sm md:text-base px-6 md:px-10 py-3 md:py-4 rounded-full hover:bg-gold-light transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-gold-glow"
-              >
-                Agendar diagnóstico gratuito
-              </WhatsAppLink>
-            </motion.div>
+              Agendar diagnóstico gratuito
+            </motion.a>
           </motion.div>
 
           {/* Stats integrados no Hero */}
