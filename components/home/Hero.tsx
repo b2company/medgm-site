@@ -30,7 +30,7 @@ export default function Hero() {
             priority
             quality={100}
             sizes="100vw"
-            className="object-cover object-bottom object-right"
+            className="object-cover object-bottom"
           />
         </div>
 
