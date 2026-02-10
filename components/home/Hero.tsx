@@ -1,23 +1,36 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <>
-      {/* Hero Section - Background Fixo com Imagens */}
-      <section className="relative text-white min-h-screen px-4 pt-24 md:pt-32 lg:pt-36 pb-20">
+      {/* Hero Section - Background com Imagens Conectadas ao Texto */}
+      <section className="relative text-white min-h-screen px-4 pt-24 md:pt-32 lg:pt-36 pb-20 overflow-hidden">
         {/* Background Desktop */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden lg:block"
-          style={{ backgroundImage: 'url(/hero-desktop.webp)' }}
-        />
+        <div className="absolute inset-0 hidden lg:block">
+          <Image
+            src="/hero-desktop.webp"
+            alt="Equipe MedGM"
+            fill
+            priority
+            quality={100}
+            className="object-cover object-center"
+          />
+        </div>
 
         {/* Background Mobile */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat lg:hidden"
-          style={{ backgroundImage: 'url(/hero-mobile.webp)' }}
-        />
+        <div className="absolute inset-0 lg:hidden">
+          <Image
+            src="/hero-mobile.webp"
+            alt="Equipe MedGM"
+            fill
+            priority
+            quality={100}
+            className="object-cover object-center"
+          />
+        </div>
 
         {/* Overlay escuro sutil */}
         <div className="absolute inset-0 bg-black/20"></div>
