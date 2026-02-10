@@ -18,7 +18,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center mb-12 md:mb-16"
+            className="flex justify-center mb-6 md:mb-8"
           >
             <div className="relative px-2">
               {/* Linha superior */}
