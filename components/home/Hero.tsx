@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -25,17 +24,17 @@ export default function Hero() {
 
         {/* Conteúdo sobre o background */}
         <div className="container-custom relative z-10">
-          {/* Tarja NO TOPO - Ocupa 70% da página */}
+          {/* Tarja NO TOPO - Centralizada */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center mb-8 md:mb-10 w-full lg:w-[70%]"
+            className="flex justify-center mb-8 md:mb-10"
           >
-            <div className="relative px-2">
+            <div className="relative px-4">
               <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent mb-2"></div>
-              <div className="px-2 md:px-4 py-1.5">
-                <p className="text-gold font-body font-semibold text-[9px] md:text-xs tracking-[0.15em] uppercase leading-tight text-center">
+              <div className="px-4 md:px-6 py-2">
+                <p className="text-gold font-body font-semibold text-xs md:text-sm tracking-[0.15em] uppercase leading-tight text-center">
                   EXCLUSIVO PARA CLÍNICAS QUE FATURAM ACIMA DE R$ 50 MIL/MÊS
                 </p>
               </div>
@@ -44,7 +43,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Conteúdo de Texto */}
-          <div className="max-w-2xl mx-auto lg:mx-0">
+          <div className="max-w-full lg:max-w-2xl mx-auto lg:mx-0 lg:mr-auto">
             <div className="text-center lg:text-left">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -71,18 +70,8 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
+              className="flex justify-center lg:justify-start"
             >
-              <motion.a
-                href="#form"
-                className="bg-transparent border-2 border-gold text-gold font-body font-semibold text-sm px-8 py-3 rounded-full hover:bg-gold/10 transition-all inline-flex items-center justify-center gap-2"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Quero saber mais
-                <ArrowRight size={16} />
-              </motion.a>
-
               <motion.a
                 href="/contato"
                 className="bg-gold text-dark font-body font-bold text-sm px-8 py-3 rounded-full hover:bg-gold-light transition-all inline-flex items-center justify-center shadow-gold-glow"
