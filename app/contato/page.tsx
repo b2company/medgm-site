@@ -41,10 +41,10 @@ export default function Contato() {
               className="bg-gradient-to-br from-[#111] to-[#0A0A0A] border border-white/10 rounded-3xl p-6 md:p-10 shadow-2xl"
             >
               <iframe
-                src="https://admin.b2company.co/widget/survey/lgr3ErIPvgmEaTq7ZsO2"
+                src="https://admin.b2company.co/widget/survey/WjbrtUI2XiHyijECVzEG"
                 style={{ border: 'none', width: '100%', minHeight: '600px' }}
                 scrolling="no"
-                id="lgr3ErIPvgmEaTq7ZsO2"
+                id="WjbrtUI2XiHyijECVzEG"
                 title="Formulário de Contato MedGM"
               />
               <Script
