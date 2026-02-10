@@ -125,24 +125,23 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Coluna Direita - Imagem do Time GIGANTE com fundo */}
+          {/* Coluna Direita - Imagem do Time GIGANTE subindo */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2, delay: 0.3 }}
             className="relative hidden lg:block"
           >
-            {/* Container com fundo */}
-            <div className="relative w-[500px] h-[650px] bg-gradient-to-br from-gold/5 to-gold/10 rounded-3xl p-8 border border-gold/20">
-              <div className="relative w-full h-full">
-                <Image
-                  src="/team-medgm.webp"
-                  alt="Time MedGM"
-                  fill
-                  priority
-                  className="object-contain"
-                />
-              </div>
+            {/* Imagem GIGANTE que sobe do container */}
+            <div className="relative w-[600px] h-[850px]">
+              <Image
+                src="/team-medgm.webp"
+                alt="Time MedGM"
+                fill
+                priority
+                className="object-contain object-bottom"
+                style={{ transform: 'translateY(-80px)' }}
+              />
             </div>
           </motion.div>
 
