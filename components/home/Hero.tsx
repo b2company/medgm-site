@@ -6,37 +6,44 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <>
-      {/* Hero Section - Background com Imagens Conectadas ao Texto */}
-      <section className="relative text-white min-h-screen px-4 pt-24 md:pt-32 lg:pt-36 pb-20 overflow-hidden">
-        {/* Background Desktop */}
-        <div className="absolute inset-0 hidden lg:block">
-          <Image
-            src="/hero-desktop.webp"
-            alt="Equipe MedGM"
-            fill
-            priority
-            quality={100}
-            className="object-cover object-center"
-          />
+      {/* Hero Section - Imagem e Texto Sincronizados */}
+      <section className="relative text-white grid min-h-screen">
+        {/* Camada de Imagem - Desktop */}
+        <div className="hidden lg:block col-start-1 row-start-1 w-full h-full">
+          <div className="relative w-full min-h-screen">
+            <Image
+              src="/hero-desktop.webp"
+              alt="Equipe MedGM"
+              width={1920}
+              height={1080}
+              priority
+              quality={100}
+              className="w-full h-full min-h-screen object-cover object-center"
+            />
+          </div>
         </div>
 
-        {/* Background Mobile */}
-        <div className="absolute inset-0 lg:hidden">
-          <Image
-            src="/hero-mobile.webp"
-            alt="Equipe MedGM"
-            fill
-            priority
-            quality={100}
-            className="object-cover object-center"
-          />
+        {/* Camada de Imagem - Mobile */}
+        <div className="lg:hidden col-start-1 row-start-1 w-full h-full">
+          <div className="relative w-full min-h-screen">
+            <Image
+              src="/hero-mobile.webp"
+              alt="Equipe MedGM"
+              width={768}
+              height={1024}
+              priority
+              quality={100}
+              className="w-full h-full min-h-screen object-cover object-center"
+            />
+          </div>
         </div>
 
         {/* Overlay escuro sutil */}
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="col-start-1 row-start-1 bg-black/20"></div>
 
-        {/* Conteúdo sobre o background */}
-        <div className="container-custom relative z-10">
+        {/* Conteúdo sobre a imagem */}
+        <div className="col-start-1 row-start-1 px-4 pt-24 md:pt-32 lg:pt-36 pb-20">
+          <div className="container-custom">
           {/* Tarja NO TOPO - Centralizada */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -96,10 +103,11 @@ export default function Hero() {
             </motion.div>
             </div>
           </div>
+          </div>
         </div>
 
         {/* Gradiente divisor */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#0A0A0A] pointer-events-none z-20"></div>
+        <div className="col-start-1 row-start-1 self-end h-32 bg-gradient-to-b from-transparent to-[#0A0A0A] pointer-events-none"></div>
       </section>
 
       {/* Stats Section */}
