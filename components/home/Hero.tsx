@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/20"></div>
 
         {/* Conteúdo sobre o background */}
-        <div className="container-custom relative z-10 py-32">
+        <div className="container-custom relative z-10 py-16 md:py-24 lg:py-32">
           {/* Tarja NO TOPO - Ocupa 70% da página */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
