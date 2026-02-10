@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FileText, Phone, Calendar } from "lucide-react";
-import Script from "next/script";
+import { useEffect } from "react";
 
 const steps = [
   {
@@ -29,6 +29,20 @@ const steps = [
 ];
 
 export default function FormSteps() {
+  useEffect(() => {
+    // Carregar script do formulário
+    const script = document.createElement('script');
+    script.src = 'https://admin.b2company.co/js/form_embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup ao desmontar
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
     <section id="form" className="bg-dark-deep py-20 md:py-32">
@@ -94,14 +108,11 @@ export default function FormSteps() {
         >
           <iframe
             src="https://admin.b2company.co/widget/survey/WjbrtUI2XiHyijECVzEG"
-            style={{ border: 'none', width: '100%', minHeight: '600px' }}
-            scrolling="no"
+            className="w-full border-0"
+            style={{ minHeight: '800px' }}
             id="WjbrtUI2XiHyijECVzEG"
             title="Formulário MedGM"
-          />
-          <Script
-            src="https://admin.b2company.co/js/form_embed.js"
-            strategy="afterInteractive"
+            allow="geolocation"
           />
         </motion.div>
       </div>
