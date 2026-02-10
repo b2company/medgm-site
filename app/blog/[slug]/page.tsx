@@ -144,28 +144,52 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       {/* Article Content */}
       <article className="py-16 md:py-24 bg-white">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto px-4">
             {/* Linha decorativa */}
-            <div className="h-1 w-24 bg-gradient-to-r from-gold-dark via-gold to-gold-light mb-12 rounded-full"></div>
+            <div className="h-1 w-24 bg-gradient-to-r from-gold-dark via-gold to-gold-light mb-16 rounded-full"></div>
 
             <div className="prose prose-xl max-w-none
-              prose-headings:font-heading prose-headings:font-bold prose-headings:text-dark
-              prose-h2:text-3xl prose-h2:md:text-4xl prose-h2:mt-16 prose-h2:mb-6 prose-h2:text-gold prose-h2:border-b-2 prose-h2:border-gold/20 prose-h2:pb-4
-              prose-h3:text-2xl prose-h3:md:text-3xl prose-h3:mt-12 prose-h3:mb-4
-              prose-h4:text-xl prose-h4:md:text-2xl prose-h4:mt-8 prose-h4:mb-3
-              prose-p:leading-relaxed prose-p:text-gray-700 prose-p:text-lg prose-p:mb-6
-              prose-strong:text-gold prose-strong:font-bold
-              prose-em:text-gray-600 prose-em:italic
-              prose-a:text-gold prose-a:font-semibold prose-a:no-underline hover:prose-a:underline prose-a:transition-all
-              prose-ul:my-8 prose-ul:space-y-3
-              prose-ol:my-8 prose-ol:space-y-3
-              prose-li:text-gray-700 prose-li:text-lg prose-li:leading-relaxed
-              prose-li:marker:text-gold
-              prose-blockquote:border-l-4 prose-blockquote:border-gold prose-blockquote:bg-neutral prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:my-8 prose-blockquote:italic prose-blockquote:text-gray-700
-              prose-code:text-gold prose-code:bg-neutral prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:before:content-[''] prose-code:after:content-['']
-              prose-pre:bg-dark prose-pre:text-white prose-pre:p-6 prose-pre:rounded-xl prose-pre:my-8 prose-pre:overflow-x-auto
-              prose-img:rounded-xl prose-img:shadow-lg prose-img:my-8
-              prose-hr:border-gold/30 prose-hr:my-12
+              prose-headings:font-display prose-headings:font-bold prose-headings:text-dark prose-headings:tracking-tight
+
+              prose-h1:text-4xl prose-h1:md:text-5xl prose-h1:mb-8 prose-h1:leading-tight
+
+              prose-h2:text-3xl prose-h2:md:text-4xl prose-h2:mt-20 prose-h2:mb-8 prose-h2:text-dark prose-h2:border-b-2 prose-h2:border-gold/30 prose-h2:pb-6 prose-h2:leading-snug
+              prose-h2:before:content-[''] prose-h2:before:block prose-h2:before:w-12 prose-h2:before:h-1 prose-h2:before:bg-gold prose-h2:before:mb-4 prose-h2:before:rounded-full
+
+              prose-h3:text-2xl prose-h3:md:text-3xl prose-h3:mt-16 prose-h3:mb-6 prose-h3:text-dark prose-h3:font-bold prose-h3:leading-snug
+
+              prose-h4:text-xl prose-h4:md:text-2xl prose-h4:mt-12 prose-h4:mb-5 prose-h4:text-gray-800 prose-h4:font-semibold
+
+              prose-p:leading-[1.9] prose-p:text-gray-800 prose-p:text-[1.125rem] prose-p:mb-8 prose-p:font-normal
+
+              prose-strong:text-dark prose-strong:font-bold prose-strong:bg-gold/10 prose-strong:px-1 prose-strong:rounded
+
+              prose-em:text-gray-700 prose-em:italic prose-em:font-medium
+
+              prose-a:text-gold prose-a:font-semibold prose-a:no-underline prose-a:border-b-2 prose-a:border-gold/30 hover:prose-a:border-gold prose-a:transition-all prose-a:duration-300
+
+              prose-ul:my-10 prose-ul:space-y-4 prose-ul:pl-6
+              prose-ol:my-10 prose-ol:space-y-4 prose-ol:pl-6
+
+              prose-li:text-gray-800 prose-li:text-[1.125rem] prose-li:leading-[1.8] prose-li:pl-3
+              prose-li:marker:text-gold prose-li:marker:font-bold prose-li:marker:text-xl
+
+              prose-ul:prose-li:before:content-[''] prose-ul:prose-li:before:absolute prose-ul:prose-li:before:left-0 prose-ul:prose-li:before:top-[0.6em] prose-ul:prose-li:before:w-2 prose-ul:prose-li:before:h-2 prose-ul:prose-li:before:bg-gold prose-ul:prose-li:before:rounded-full prose-ul:prose-li:relative
+
+              prose-blockquote:border-l-4 prose-blockquote:border-gold prose-blockquote:bg-gradient-to-r prose-blockquote:from-neutral prose-blockquote:to-white prose-blockquote:py-8 prose-blockquote:px-8 prose-blockquote:my-12 prose-blockquote:italic prose-blockquote:text-gray-800 prose-blockquote:text-xl prose-blockquote:rounded-r-xl prose-blockquote:shadow-md
+
+              prose-code:text-gold prose-code:bg-neutral/80 prose-code:px-2.5 prose-code:py-1.5 prose-code:rounded-md prose-code:text-base prose-code:font-mono prose-code:font-medium prose-code:before:content-[''] prose-code:after:content-[''] prose-code:border prose-code:border-gold/20
+
+              prose-pre:bg-dark prose-pre:text-white prose-pre:p-8 prose-pre:rounded-2xl prose-pre:my-12 prose-pre:overflow-x-auto prose-pre:shadow-xl prose-pre:border prose-pre:border-gold/20
+
+              prose-img:rounded-2xl prose-img:shadow-2xl prose-img:my-12 prose-img:border prose-img:border-gray-200
+
+              prose-hr:border-gold/30 prose-hr:my-16 prose-hr:border-t-2
+
+              prose-table:my-12 prose-table:border-collapse prose-table:w-full
+              prose-th:bg-gold prose-th:text-dark prose-th:font-bold prose-th:py-4 prose-th:px-6 prose-th:text-left prose-th:border prose-th:border-gold-dark
+              prose-td:py-4 prose-td:px-6 prose-td:border prose-td:border-gray-300 prose-td:text-gray-800
+              prose-tr:even:bg-neutral/30
             ">
               <MDXRemote source={post.content} />
             </div>
