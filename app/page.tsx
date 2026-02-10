@@ -7,7 +7,7 @@ import Testimonials from "@/components/home/Testimonials";
 import Credentials from "@/components/home/Credentials";
 import FAQ from "@/components/home/FAQ";
 import FinalCTA from "@/components/home/FinalCTA";
-import FormSteps from "@/components/home/FormSteps";
+import CTAFormSection from "@/components/home/CTAFormSection";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       <Services />
       <Testimonials />
       <Credentials />
-      <FormSteps />
+      <CTAFormSection />
       <FAQ />
       <FinalCTA />
     </>

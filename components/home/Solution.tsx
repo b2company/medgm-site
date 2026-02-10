@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { X, Check } from "lucide-react";
+import CTASection from "@/components/CTASection";
 
 export default function Solution() {
   return (
@@ -91,6 +92,15 @@ export default function Solution() {
               </p>
             </div>
           </motion.div>
+
+          {/* CTA */}
+          <div className="mt-16">
+            <CTASection
+              variant="compact"
+              description="Quer entender como a MedGM pode estruturar o growth da sua clínica?"
+              buttonText="Agendar Diagnóstico Gratuito"
+            />
+          </div>
         </div>
       </div>
 

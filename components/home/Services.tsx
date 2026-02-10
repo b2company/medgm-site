@@ -8,6 +8,7 @@ import {
   BarChart3,
   Users,
 } from "lucide-react";
+import CTASection from "@/components/CTASection";
 
 const services = [
   {
@@ -97,6 +98,15 @@ export default function Services() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="mt-20">
+          <CTASection
+            variant="compact"
+            description="Tenha uma equipe completa de marketing médico trabalhando para você."
+            buttonText="Conhecer as Soluções"
+          />
         </div>
       </div>
 

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { AlertCircle } from "lucide-react";
+import CTASection from "@/components/CTASection";
 
 const pains = [
   "Concorrência crescente no digital.",
@@ -88,7 +89,7 @@ export default function Problem() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-center"
+            className="text-center mb-12"
           >
             <div className="inline-block bg-gradient-to-r from-gold/10 to-gold-light/10 border border-gold/30 rounded-2xl px-8 md:px-12 py-6 md:py-8">
               <p className="text-2xl md:text-3xl lg:text-4xl font-display font-semibold text-gold-light leading-tight">
@@ -96,6 +97,13 @@ export default function Problem() {
               </p>
             </div>
           </motion.div>
+
+          {/* CTA */}
+          <CTASection
+            variant="minimal"
+            buttonText="Receber Diagnóstico Gratuito"
+            className="mt-12"
+          />
         </div>
       </div>
     </section>

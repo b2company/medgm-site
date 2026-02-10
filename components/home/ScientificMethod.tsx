@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import CTASection from "@/components/CTASection";
 
 const methodSteps = [
   {
@@ -87,6 +88,15 @@ export default function ScientificMethod() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="mt-20">
+          <CTASection
+            variant="compact"
+            description="Implemente o método que já transformou mais de 250 clínicas médicas."
+            buttonText="Começar Agora"
+          />
         </div>
       </div>
 
