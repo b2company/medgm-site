@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <>
       {/* Hero Section - Background Fixo com Imagens */}
-      <section className="relative text-white min-h-screen flex items-center px-4">
+      <section className="relative text-white min-h-screen flex items-center px-4 pt-24 md:pt-28 lg:pt-32">
         {/* Background Desktop */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden lg:block"
@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/20"></div>
 
         {/* Conteúdo sobre o background */}
-        <div className="container-custom relative z-10 py-16 md:py-24 lg:py-32">
+        <div className="container-custom relative z-10 py-8 md:py-12 lg:py-16">
           {/* Tarja NO TOPO - Ocupa 70% da página */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
