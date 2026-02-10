@@ -8,82 +8,74 @@ export default function Hero() {
   return (
     <>
       {/* Hero Section - Primeira Dobra */}
-      <section className="relative bg-[#0A0A0A] text-white min-h-screen flex flex-col justify-center pt-32 md:pt-40 pb-0 px-4 overflow-hidden">
+      <section className="relative bg-[#0A0A0A] text-white min-h-screen pt-24 pb-12 px-4 overflow-hidden">
         {/* Glow radial dourado */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] max-w-[200vw] bg-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-        <div className="container-custom relative z-10">
-          {/* Tarja NO TOPO - acima de tudo */}
+        <div className="container-custom relative z-10 h-full">
+          {/* Tarja NO TOPO */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center mb-8 md:mb-10"
+            className="flex justify-center pt-4 mb-12"
           >
             <div className="relative px-2">
-              {/* Linha superior */}
               <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent mb-2"></div>
-
-              {/* Tarja */}
               <div className="px-2 md:px-4 py-1.5">
                 <p className="text-gold font-body font-semibold text-[9px] md:text-xs tracking-[0.15em] uppercase leading-tight text-center">
                   EXCLUSIVO PARA CLÍNICAS QUE FATURAM ACIMA DE R$ 50 MIL/MÊS
                 </p>
               </div>
-
-              {/* Linha inferior */}
               <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent mt-2"></div>
             </div>
           </motion.div>
 
-          {/* Grid: 40% texto (esquerda) + 60% imagem (direita) */}
-          <div className="grid lg:grid-cols-[40%_60%] gap-4 lg:gap-6 items-center max-w-7xl mx-auto">
+          {/* Grid: 40% texto + 60% imagem */}
+          <div className="grid lg:grid-cols-[45%_55%] gap-8 items-start max-w-7xl mx-auto">
 
-            {/* Coluna Esquerda - Conteúdo (40% - ALINHADO À ESQUERDA) */}
-            <div className="text-center lg:text-left">
-              {/* Headline */}
+            {/* Coluna Esquerda - Conteúdo */}
+            <div className="text-center lg:text-left pt-8">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-3xl md:text-4xl lg:text-5xl font-display font-light text-white mb-6 leading-[1.2] tracking-tight"
+                className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-light text-white mb-6 leading-[1.15]"
               >
                 Profissional da saúde não precisa aprender marketing.{" "}
-                <span className="text-white">
+                <span className="text-white font-normal">
                   Precisa de quem faça por ele.
                 </span>
               </motion.h1>
 
-              {/* Sub-headline */}
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-base md:text-lg text-[#888] mb-10 font-body font-light leading-relaxed"
+                className="text-base md:text-lg text-gray-400 mb-10 font-body leading-relaxed"
               >
                 Assessoria de growth exclusiva para clínicas médicas. Desde 2021 estruturando o crescimento de mais de 250 projetos na área da saúde.
               </motion.p>
 
-              {/* CTAs */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-center"
+                className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
               >
                 <motion.a
                   href="#form"
-                  className="w-full sm:w-auto bg-transparent border-2 border-gold text-gold font-body font-semibold text-sm md:text-base px-8 py-3 rounded-full hover:bg-gold/10 transition-all duration-300 inline-flex items-center justify-center gap-2"
+                  className="bg-transparent border-2 border-gold text-gold font-body font-semibold text-sm px-8 py-3 rounded-full hover:bg-gold/10 transition-all inline-flex items-center justify-center gap-2"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   Quero saber mais
-                  <ArrowRight size={18} />
+                  <ArrowRight size={16} />
                 </motion.a>
 
                 <motion.a
                   href="/contato"
-                  className="w-full sm:w-auto bg-gold text-dark font-body font-bold text-sm md:text-base px-8 py-3 rounded-full hover:bg-gold-light transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-gold-glow"
+                  className="bg-gold text-dark font-body font-bold text-sm px-8 py-3 rounded-full hover:bg-gold-light transition-all inline-flex items-center justify-center shadow-gold-glow"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -92,32 +84,30 @@ export default function Hero() {
               </motion.div>
             </div>
 
-            {/* Coluna Direita - Imagem GIGANTE (60%) */}
+            {/* Coluna Direita - Imagem */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, delay: 0.3 }}
-              className="relative hidden lg:block"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="relative hidden lg:block h-[650px]"
             >
-              <div className="relative w-full h-[900px]">
-                <Image
-                  src="/team-medgm.webp"
-                  alt="Time MedGM"
-                  fill
-                  priority
-                  className="object-contain object-center"
-                />
-              </div>
+              <Image
+                src="/team-medgm.webp"
+                alt="Time MedGM"
+                fill
+                priority
+                className="object-contain object-center"
+              />
             </motion.div>
 
           </div>
         </div>
 
-        {/* Divisor com gradiente suave na parte inferior */}
+        {/* Gradiente divisor */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#0A0A0A] pointer-events-none z-20"></div>
       </section>
 
-      {/* Stats Section - ABAIXO da primeira dobra */}
+      {/* Stats Section */}
       <StatsSection />
     </>
   );
