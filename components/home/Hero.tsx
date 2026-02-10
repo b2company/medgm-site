@@ -13,34 +13,22 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative bg-white text-dark min-h-screen flex flex-col justify-center pt-20 pb-8 px-4 overflow-hidden">
-      <div className="container-custom relative z-10">
-        {/* Grid de duas colunas: imagem à esquerda, texto à direita */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-7xl mx-auto">
-          {/* Coluna Esquerda - Imagem do Time GIGANTE */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="relative hidden lg:block h-[700px] w-full"
-          >
-            <Image
-              src="/team-medgm.webp"
-              alt="Time MedGM"
-              fill
-              priority
-              className="object-contain object-left"
-            />
-          </motion.div>
+    <section className="relative bg-[#0A0A0A] text-white min-h-screen flex flex-col justify-center pt-20 pb-8 px-4 overflow-hidden">
+      {/* Glow radial dourado */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] max-w-[200vw] bg-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-          {/* Coluna Direita - Conteúdo */}
-          <div className="text-center lg:text-left">
-            {/* Tarja superior */}
+      <div className="container-custom relative z-10">
+        {/* Grid de duas colunas: texto à esquerda, imagem à direita */}
+        <div className="grid lg:grid-cols-[1fr_auto] gap-8 lg:gap-16 items-center max-w-7xl mx-auto">
+
+          {/* Coluna Esquerda - Conteúdo */}
+          <div className="text-center max-w-3xl mx-auto">
+            {/* Tarja superior centralizada */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="flex justify-center lg:justify-start mb-8"
+              className="flex justify-center mb-8"
             >
               <div className="relative px-2 max-w-[95vw]">
                 {/* Linha superior */}
@@ -62,11 +50,11 @@ export default function Hero() {
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-3xl md:text-5xl lg:text-6xl font-display font-light text-dark mb-4 md:mb-6 leading-[1.2] tracking-tight px-2"
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-3xl md:text-5xl lg:text-6xl font-display font-light text-white mb-4 md:mb-6 leading-[1.2] tracking-tight px-2"
             >
               Profissional da saúde não precisa aprender marketing.{" "}
-              <span className="text-dark">
+              <span className="text-white">
                 Precisa de quem faça por ele.
               </span>
             </motion.h1>
@@ -75,8 +63,8 @@ export default function Hero() {
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-base md:text-xl text-gray-700 mb-8 md:mb-12 font-body font-light leading-relaxed px-2"
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-base md:text-xl text-[#888] mb-8 md:mb-12 font-body font-light leading-relaxed px-2"
             >
               Assessoria de growth exclusiva para clínicas médicas. Desde 2021 estruturando o crescimento de mais de 250 projetos na área da saúde.
             </motion.p>
@@ -85,8 +73,8 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start items-center mb-12 md:mb-16 px-2"
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-12 md:mb-16 px-2"
             >
               <motion.a
                 href="#form"
@@ -112,23 +100,23 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
-              className="pt-8 md:pt-12 border-t border-gold/20"
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="pt-8 md:pt-12 border-t border-gold/10"
             >
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 1.1 + index * 0.1 }}
-                    className="text-center lg:text-left group"
+                    transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
+                    className="text-center group"
                   >
                     <p className="text-2xl md:text-4xl font-display font-bold text-gold mb-1.5 md:mb-2 group-hover:text-gold-light transition-colors">
                       {stat.number}
                     </p>
-                    <div className="h-px w-6 md:w-8 bg-gold/30 mx-auto lg:mx-0 mb-1.5 md:mb-2"></div>
-                    <p className="text-[10px] md:text-sm font-body uppercase tracking-[0.1em] md:tracking-[0.15em] text-gray-600 leading-tight px-1">
+                    <div className="h-px w-6 md:w-8 bg-gold/30 mx-auto mb-1.5 md:mb-2"></div>
+                    <p className="text-[10px] md:text-sm font-body uppercase tracking-[0.1em] md:tracking-[0.15em] text-gray-400 leading-tight px-1">
                       {stat.label}
                     </p>
                   </motion.div>
@@ -136,6 +124,28 @@ export default function Hero() {
               </div>
             </motion.div>
           </div>
+
+          {/* Coluna Direita - Imagem do Time GIGANTE com fundo */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="relative hidden lg:block"
+          >
+            {/* Container com fundo */}
+            <div className="relative w-[500px] h-[650px] bg-gradient-to-br from-gold/5 to-gold/10 rounded-3xl p-8 border border-gold/20">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/team-medgm.webp"
+                  alt="Time MedGM"
+                  fill
+                  priority
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </motion.div>
+
         </div>
       </div>
     </section>
