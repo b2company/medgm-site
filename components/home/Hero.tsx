@@ -2,23 +2,35 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 
 export default function Hero() {
   return (
     <>
-      {/* Hero Section - Primeira Dobra */}
-      <section className="relative bg-[#0A0A0A] text-white min-h-screen pt-24 pb-12 px-4 overflow-hidden">
-        {/* Glow radial dourado */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] max-w-[200vw] bg-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
+      {/* Hero Section - Background Fixo com Imagens */}
+      <section className="relative text-white min-h-screen flex items-center px-4">
+        {/* Background Desktop */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden lg:block"
+          style={{ backgroundImage: 'url(/hero-desktop.webp)' }}
+        />
 
-        <div className="container-custom relative z-10 h-full">
+        {/* Background Mobile */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat lg:hidden"
+          style={{ backgroundImage: 'url(/hero-mobile.webp)' }}
+        />
+
+        {/* Overlay escuro sutil */}
+        <div className="absolute inset-0 bg-black/20"></div>
+
+        {/* Conteúdo sobre o background */}
+        <div className="container-custom relative z-10 py-32">
           {/* Tarja NO TOPO */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center pt-4 mb-12"
+            className="flex justify-center lg:justify-start mb-12 max-w-4xl"
           >
             <div className="relative px-2">
               <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent mb-2"></div>
@@ -31,75 +43,54 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Grid: 40% texto + 60% imagem */}
-          <div className="grid lg:grid-cols-[45%_55%] gap-8 items-start max-w-7xl mx-auto">
-
-            {/* Coluna Esquerda - Conteúdo */}
-            <div className="text-center lg:text-left pt-8">
-              <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-light text-white mb-6 leading-[1.15]"
-              >
-                Profissional da saúde não precisa aprender marketing.{" "}
-                <span className="text-white font-normal">
-                  Precisa de quem faça por ele.
-                </span>
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-base md:text-lg text-gray-400 mb-10 font-body leading-relaxed"
-              >
-                Assessoria de growth exclusiva para clínicas médicas. Desde 2021 estruturando o crescimento de mais de 250 projetos na área da saúde.
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
-              >
-                <motion.a
-                  href="#form"
-                  className="bg-transparent border-2 border-gold text-gold font-body font-semibold text-sm px-8 py-3 rounded-full hover:bg-gold/10 transition-all inline-flex items-center justify-center gap-2"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  Quero saber mais
-                  <ArrowRight size={16} />
-                </motion.a>
-
-                <motion.a
-                  href="/contato"
-                  className="bg-gold text-dark font-body font-bold text-sm px-8 py-3 rounded-full hover:bg-gold-light transition-all inline-flex items-center justify-center shadow-gold-glow"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  Agendar diagnóstico gratuito
-                </motion.a>
-              </motion.div>
-            </div>
-
-            {/* Coluna Direita - Imagem */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="relative hidden lg:block h-[650px]"
+          {/* Conteúdo de Texto */}
+          <div className="max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-light text-white mb-6 leading-[1.15]"
             >
-              <Image
-                src="/team-medgm.webp"
-                alt="Time MedGM"
-                fill
-                priority
-                className="object-contain object-center"
-              />
-            </motion.div>
+              Profissional da saúde não precisa aprender marketing.{" "}
+              <span className="font-normal">
+                Precisa de quem faça por ele.
+              </span>
+            </motion.h1>
 
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-base md:text-lg text-gray-200 mb-10 font-body leading-relaxed"
+            >
+              Assessoria de growth exclusiva para clínicas médicas. Desde 2021 estruturando o crescimento de mais de 250 projetos na área da saúde.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
+            >
+              <motion.a
+                href="#form"
+                className="bg-transparent border-2 border-gold text-gold font-body font-semibold text-sm px-8 py-3 rounded-full hover:bg-gold/10 transition-all inline-flex items-center justify-center gap-2"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Quero saber mais
+                <ArrowRight size={16} />
+              </motion.a>
+
+              <motion.a
+                href="/contato"
+                className="bg-gold text-dark font-body font-bold text-sm px-8 py-3 rounded-full hover:bg-gold-light transition-all inline-flex items-center justify-center shadow-gold-glow"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Agendar diagnóstico gratuito
+              </motion.a>
+            </motion.div>
           </div>
         </div>
 
