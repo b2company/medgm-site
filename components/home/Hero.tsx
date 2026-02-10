@@ -10,30 +10,28 @@ export default function Hero() {
       <section className="relative text-white grid min-h-screen">
         {/* Camada de Imagem - Desktop */}
         <div className="hidden lg:block col-start-1 row-start-1 w-full h-full z-0">
-          <div className="relative w-full min-h-screen">
+          <div className="relative w-full h-full min-h-screen">
             <Image
               src="/hero-desktop.webp"
               alt="Equipe MedGM"
-              width={1920}
-              height={1080}
+              fill
               priority
               quality={100}
-              className="w-full h-full min-h-screen object-cover object-center"
+              className="object-cover object-center"
             />
           </div>
         </div>
 
         {/* Camada de Imagem - Mobile */}
         <div className="lg:hidden col-start-1 row-start-1 w-full h-full z-0">
-          <div className="relative w-full min-h-screen">
+          <div className="relative w-full h-full min-h-screen">
             <Image
               src="/hero-mobile.webp"
               alt="Equipe MedGM"
-              width={768}
-              height={1024}
+              fill
               priority
               quality={100}
-              className="w-full h-full min-h-screen object-cover object-center"
+              className="object-cover object-center"
             />
           </div>
         </div>
