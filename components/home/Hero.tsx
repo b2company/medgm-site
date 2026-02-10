@@ -8,39 +8,39 @@ export default function Hero() {
   return (
     <>
       {/* Hero Section - Primeira Dobra */}
-      <section className="relative bg-[#0A0A0A] text-white min-h-screen flex flex-col justify-center pt-20 pb-8 px-4 overflow-hidden">
+      <section className="relative bg-[#0A0A0A] text-white min-h-screen flex flex-col justify-center pt-20 pb-0 px-4 overflow-hidden">
         {/* Glow radial dourado */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] max-w-[200vw] bg-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
 
         <div className="container-custom relative z-10">
+          {/* Tarja NO TOPO - acima de tudo */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center mb-12 md:mb-16"
+          >
+            <div className="relative px-2">
+              {/* Linha superior */}
+              <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent mb-2"></div>
+
+              {/* Tarja */}
+              <div className="px-2 md:px-4 py-1.5">
+                <p className="text-gold font-body font-semibold text-[9px] md:text-xs tracking-[0.15em] uppercase leading-tight text-center">
+                  EXCLUSIVO PARA CLÍNICAS QUE FATURAM ACIMA DE R$ 50 MIL/MÊS
+                </p>
+              </div>
+
+              {/* Linha inferior */}
+              <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent mt-2"></div>
+            </div>
+          </motion.div>
+
           {/* Grid: 40% texto (esquerda) + 60% imagem (direita) */}
           <div className="grid lg:grid-cols-[40%_60%] gap-8 items-center max-w-7xl mx-auto">
 
             {/* Coluna Esquerda - Conteúdo (40% - ALINHADO À ESQUERDA) */}
             <div className="text-center lg:text-left">
-              {/* Tarja superior */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="flex justify-center lg:justify-start mb-8"
-              >
-                <div className="relative px-2">
-                  {/* Linha superior */}
-                  <div className="h-px w-full bg-gradient-to-r from-gold via-gold to-transparent mb-2"></div>
-
-                  {/* Tarja */}
-                  <div className="px-2 md:px-4 py-1.5">
-                    <p className="text-gold font-body font-semibold text-[9px] md:text-xs tracking-[0.15em] uppercase leading-tight">
-                      EXCLUSIVO PARA CLÍNICAS QUE FATURAM ACIMA DE R$ 50 MIL/MÊS
-                    </p>
-                  </div>
-
-                  {/* Linha inferior */}
-                  <div className="h-px w-full bg-gradient-to-r from-gold via-gold to-transparent mt-2"></div>
-                </div>
-              </motion.div>
-
               {/* Headline */}
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
@@ -112,6 +112,9 @@ export default function Hero() {
 
           </div>
         </div>
+
+        {/* Divisor com gradiente suave na parte inferior */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#0A0A0A] pointer-events-none z-20"></div>
       </section>
 
       {/* Stats Section - ABAIXO da primeira dobra */}
