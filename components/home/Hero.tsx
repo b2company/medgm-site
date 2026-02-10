@@ -25,12 +25,12 @@ export default function Hero() {
 
         {/* Conteúdo sobre o background */}
         <div className="container-custom relative z-10 py-32">
-          {/* Tarja NO TOPO */}
+          {/* Tarja NO TOPO - Ocupa 70% da página */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center lg:justify-start mb-12 max-w-4xl"
+            className="flex justify-center mb-12 w-full lg:w-[70%]"
           >
             <div className="relative px-2">
               <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent mb-2"></div>
