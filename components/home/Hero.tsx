@@ -38,7 +38,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/20"></div>
 
         {/* Conteúdo */}
-        <div className="relative z-10 min-h-screen flex flex-col justify-start pt-24 md:pt-32 lg:pt-36 pb-20 px-4">
+        <div className="relative z-10 min-h-screen flex flex-col justify-center md:justify-start pt-32 md:pt-32 lg:pt-36 pb-20 px-4">
           <div className="w-full max-w-7xl mx-auto">
             {/* Tarja NO TOPO - Centralizada */}
             <motion.div
