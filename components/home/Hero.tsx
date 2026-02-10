@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <>
       {/* Hero Section - Background Fixo com Imagens */}
-      <section className="relative text-white min-h-screen flex items-center px-4 pt-24 md:pt-28 lg:pt-32">
+      <section className="relative text-white min-h-screen px-4 pt-24 md:pt-32 lg:pt-36 pb-20">
         {/* Background Desktop */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden lg:block"
@@ -24,13 +24,13 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/20"></div>
 
         {/* Conteúdo sobre o background */}
-        <div className="container-custom relative z-10 py-8 md:py-12 lg:py-16">
+        <div className="container-custom relative z-10">
           {/* Tarja NO TOPO - Ocupa 70% da página */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center mb-12 w-full lg:w-[70%]"
+            className="flex justify-center mb-8 md:mb-10 w-full lg:w-[70%]"
           >
             <div className="relative px-2">
               <div className="h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent mb-2"></div>
@@ -44,12 +44,13 @@ export default function Hero() {
           </motion.div>
 
           {/* Conteúdo de Texto */}
-          <div className="max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
+          <div className="max-w-2xl mx-auto lg:mx-0">
+            <div className="text-center lg:text-left">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-light text-white mb-6 leading-[1.15]"
+              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-light text-white mb-4 md:mb-5 leading-[1.15]"
             >
               Profissional da saúde não precisa aprender marketing.{" "}
               <span className="font-normal">
@@ -61,7 +62,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-base md:text-lg text-gray-200 mb-10 font-body leading-relaxed"
+              className="text-base md:text-lg text-gray-200 mb-6 md:mb-8 font-body leading-relaxed"
             >
               Assessoria de growth exclusiva para clínicas médicas. Desde 2021 estruturando o crescimento de mais de 250 projetos na área da saúde.
             </motion.p>
@@ -91,6 +92,7 @@ export default function Hero() {
                 Agendar diagnóstico gratuito
               </motion.a>
             </motion.div>
+            </div>
           </div>
         </div>
 
