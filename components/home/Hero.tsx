@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Hero Section - Imagem e Texto Sincronizados */}
       <section className="relative text-white grid min-h-screen">
         {/* Camada de Imagem - Desktop */}
-        <div className="hidden lg:block col-start-1 row-start-1 w-full h-full">
+        <div className="hidden lg:block col-start-1 row-start-1 w-full h-full z-0">
           <div className="relative w-full min-h-screen">
             <Image
               src="/hero-desktop.webp"
@@ -24,7 +24,7 @@ export default function Hero() {
         </div>
 
         {/* Camada de Imagem - Mobile */}
-        <div className="lg:hidden col-start-1 row-start-1 w-full h-full">
+        <div className="lg:hidden col-start-1 row-start-1 w-full h-full z-0">
           <div className="relative w-full min-h-screen">
             <Image
               src="/hero-mobile.webp"
@@ -39,10 +39,10 @@ export default function Hero() {
         </div>
 
         {/* Overlay escuro sutil */}
-        <div className="col-start-1 row-start-1 bg-black/20"></div>
+        <div className="col-start-1 row-start-1 bg-black/20 z-10"></div>
 
         {/* Conteúdo sobre a imagem */}
-        <div className="col-start-1 row-start-1 px-4 pt-24 md:pt-32 lg:pt-36 pb-20">
+        <div className="col-start-1 row-start-1 px-4 pt-24 md:pt-32 lg:pt-36 pb-20 z-20">
           <div className="container-custom">
           {/* Tarja NO TOPO - Centralizada */}
           <motion.div
@@ -107,7 +107,7 @@ export default function Hero() {
         </div>
 
         {/* Gradiente divisor */}
-        <div className="col-start-1 row-start-1 self-end h-32 bg-gradient-to-b from-transparent to-[#0A0A0A] pointer-events-none"></div>
+        <div className="col-start-1 row-start-1 self-end h-32 bg-gradient-to-b from-transparent to-[#0A0A0A] pointer-events-none z-30"></div>
       </section>
 
       {/* Stats Section */}
